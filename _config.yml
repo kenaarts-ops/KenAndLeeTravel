@@ -3,4 +3,4 @@ description: Our travel adventures
 theme: minima
 
 header_pages:
- - index.md
+  - index.md
