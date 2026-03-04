@@ -135,14 +135,13 @@ export default function TripGallery({ images }) {
                                 src={`${basePath}${images[selectedPhotoIndex].path}`}
                                 controls
                                 autoPlay
-                                style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                             />
                         ) : (
-                            <Image
+                            <img
                                 src={`${basePath}${images[selectedPhotoIndex].path}`}
                                 alt={images[selectedPhotoIndex].filename}
-                                fill
-                                style={{ objectFit: 'contain' }}
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                             />
                         )}
                     </div>
