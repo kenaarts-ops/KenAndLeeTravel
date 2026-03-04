@@ -1,0 +1,7 @@
+title: Ken & Lee Travel
+description: Travel memories through photos
+theme: jekyll-theme-antigravity
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
