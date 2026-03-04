@@ -1,0 +1,25 @@
+{
+  "name": "ken-and-lee-travel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "exif-parser": "^0.1.12",
+    "gray-matter": "^4.0.3",
+    "leaflet": "^1.9.4",
+    "marked": "^17.0.3",
+    "next": "14.2.35",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35"
+  }
+}
