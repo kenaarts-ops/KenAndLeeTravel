@@ -50,7 +50,7 @@ export default function Home() {
 
         <div className="trip-grid">
           {trips.map((trip) => (
-            <Link href={`/trips/${encodeURIComponent(trip.id)}`} key={trip.id}>
+            <Link href={`/trips/${trip.id}`} key={trip.id}>
               <div className="trip-card">
                 <Image
                   src={trip.coverImage ? `${basePath}${trip.coverImage}` : `${basePath}/hero.png`}

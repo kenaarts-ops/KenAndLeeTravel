@@ -16,9 +16,10 @@ function ingestAlbums() {
 
     for (const item of items) {
         if (item.isDirectory()) {
-            const tripId = item.name;
-            const tripPath = path.join(tripsDir, tripId);
-            const files = fs.readdirSync(tripPath).filter(f => f.match(/\.(jpg|jpeg|png)$/i));
+            const originalFolderName = item.name;
+            const tripId = originalFolderName.toLowerCase().replace(/\s+/g, '-');
+            const tripPath = path.join(tripsDir, originalFolderName);
+            const files = fs.readdirSync(tripPath).filter(f => f.match(/\.(jpg|jpeg|png|mp4|mov)$/i));
 
             const tripImages = [];
             let minDate = null;
@@ -120,8 +121,8 @@ function ingestAlbums() {
                 });
             }
 
-            // Format title (e.g., "tokyo-2023" -> "Tokyo 2023")
-            const title = tripId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+            // Format title (e.g., "barbados-2026" -> "Barbados 2026")
+            const title = originalFolderName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
             trips.push({
                 id: tripId,

@@ -10,14 +10,14 @@ import TripGallery from '@/components/TripGallery';
 export async function generateStaticParams() {
     const dataPath = path.join(process.cwd(), 'src/data/trips.json');
     const trips = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-    return trips.map((trip) => ({ id: encodeURIComponent(trip.id) }));
+    return trips.map((trip) => ({ id: trip.id }));
 }
 
 export default function TripPage({ params }) {
     const basePath = '/KenAndLeeTravel';
     const dataPath = path.join(process.cwd(), 'src/data/trips.json');
     const trips = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-    const trip = trips.find(t => t.id === decodeURIComponent(params.id));
+    const trip = trips.find(t => t.id === params.id);
 
     if (!trip) {
         return <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Trip Not Found</div>;

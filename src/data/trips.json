@@ -1,20 +1,20 @@
 [
   {
-    "id": "Barbados 2026",
+    "id": "barbados-2026",
     "title": "Barbados 2026",
-    "coverImage": "/trips/Barbados 2026/PXL_20260116_201636212-EDIT.jpg",
+    "coverImage": "/trips/barbados-2026/PXL_20260116_201636212-EDIT.jpg",
     "startDate": "2026-01-16T16:16:36.000Z",
     "endDate": "2026-01-23T14:32:48.000Z",
     "images": [
       {
         "filename": "PXL_20260116_201636212-EDIT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260116_201636212-EDIT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260116_201636212-EDIT.jpg",
         "date": "2026-01-16T16:16:36.000Z",
         "location": null
       },
       {
         "filename": "PXL_20260117_170424440.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260117_170424440.jpg",
+        "path": "/trips/barbados-2026/PXL_20260117_170424440.jpg",
         "date": "2026-01-17T13:04:24.000Z",
         "location": {
           "lat": 13.09828888888889,
@@ -23,7 +23,7 @@
       },
       {
         "filename": "PXL_20260118_135246372.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_135246372.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_135246372.jpg",
         "date": "2026-01-18T09:52:46.000Z",
         "location": {
           "lat": 13.073197222222221,
@@ -32,7 +32,7 @@
       },
       {
         "filename": "PXL_20260118_135254484.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_135254484.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_135254484.jpg",
         "date": "2026-01-18T09:52:54.000Z",
         "location": {
           "lat": 13.073197222222221,
@@ -41,7 +41,7 @@
       },
       {
         "filename": "PXL_20260118_135309764.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_135309764.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_135309764.jpg",
         "date": "2026-01-18T09:53:09.000Z",
         "location": {
           "lat": 13.073197222222221,
@@ -50,7 +50,7 @@
       },
       {
         "filename": "original_bda8cb34-e2cf-4c20-adb0-8fc1e99e79dc_PXL_20260118_144114435~2.jpg",
-        "path": "/trips/Barbados 2026/original_bda8cb34-e2cf-4c20-adb0-8fc1e99e79dc_PXL_20260118_144114435~2.jpg",
+        "path": "/trips/barbados-2026/original_bda8cb34-e2cf-4c20-adb0-8fc1e99e79dc_PXL_20260118_144114435~2.jpg",
         "date": "2026-01-18T10:41:14.000Z",
         "location": {
           "lat": 13.063119444444444,
@@ -59,7 +59,7 @@
       },
       {
         "filename": "PXL_20260118_144124130.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_144124130.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_144124130.jpg",
         "date": "2026-01-18T10:41:24.000Z",
         "location": {
           "lat": 13.063119444444444,
@@ -68,7 +68,7 @@
       },
       {
         "filename": "PXL_20260118_144132255-EDIT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_144132255-EDIT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_144132255-EDIT.jpg",
         "date": "2026-01-18T10:41:32.000Z",
         "location": {
           "lat": 13.063119444444444,
@@ -77,7 +77,7 @@
       },
       {
         "filename": "PXL_20260118_144139087.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_144139087.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_144139087.jpg",
         "date": "2026-01-18T10:41:39.000Z",
         "location": {
           "lat": 13.063119444444444,
@@ -86,7 +86,7 @@
       },
       {
         "filename": "PXL_20260118_144728274.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_144728274.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_144728274.jpg",
         "date": "2026-01-18T10:47:28.000Z",
         "location": {
           "lat": 13.063197222222223,
@@ -95,7 +95,7 @@
       },
       {
         "filename": "PXL_20260118_144742278.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_144742278.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_144742278.jpg",
         "date": "2026-01-18T10:47:42.000Z",
         "location": {
           "lat": 13.063197222222223,
@@ -104,7 +104,7 @@
       },
       {
         "filename": "PXL_20260118_145134456.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_145134456.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_145134456.jpg",
         "date": "2026-01-18T10:51:34.000Z",
         "location": {
           "lat": 13.063161111111112,
@@ -113,7 +113,7 @@
       },
       {
         "filename": "PXL_20260118_145223695.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_145223695.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_145223695.jpg",
         "date": "2026-01-18T10:52:23.000Z",
         "location": {
           "lat": 13.063161111111112,
@@ -122,7 +122,7 @@
       },
       {
         "filename": "PXL_20260118_145634942.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_145634942.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_145634942.jpg",
         "date": "2026-01-18T10:56:34.000Z",
         "location": {
           "lat": 13.063619444444445,
@@ -131,7 +131,7 @@
       },
       {
         "filename": "PXL_20260118_145648377~2.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_145648377~2.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_145648377~2.jpg",
         "date": "2026-01-18T10:56:48.000Z",
         "location": {
           "lat": 13.063619444444445,
@@ -140,7 +140,7 @@
       },
       {
         "filename": "PXL_20260118_150941139.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_150941139.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_150941139.jpg",
         "date": "2026-01-18T11:09:41.000Z",
         "location": {
           "lat": 13.064336111111112,
@@ -149,7 +149,7 @@
       },
       {
         "filename": "PXL_20260118_151340682~2.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_151340682~2.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_151340682~2.jpg",
         "date": "2026-01-18T11:13:40.000Z",
         "location": {
           "lat": 13.064433333333334,
@@ -158,7 +158,7 @@
       },
       {
         "filename": "PXL_20260118_161139901~2.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_161139901~2.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_161139901~2.jpg",
         "date": "2026-01-18T12:11:39.000Z",
         "location": {
           "lat": 13.097238888888889,
@@ -167,7 +167,7 @@
       },
       {
         "filename": "PXL_20260118_173109230.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_173109230.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_173109230.jpg",
         "date": "2026-01-18T13:31:09.000Z",
         "location": {
           "lat": 13.334575000000001,
@@ -176,7 +176,7 @@
       },
       {
         "filename": "PXL_20260118_173135211.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_173135211.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_173135211.jpg",
         "date": "2026-01-18T13:31:35.000Z",
         "location": {
           "lat": 13.334575000000001,
@@ -185,7 +185,7 @@
       },
       {
         "filename": "PXL_20260118_173151981-EDIT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_173151981-EDIT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_173151981-EDIT.jpg",
         "date": "2026-01-18T13:31:51.000Z",
         "location": {
           "lat": 13.334575000000001,
@@ -194,7 +194,7 @@
       },
       {
         "filename": "PXL_20260118_173204192.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_173204192.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_173204192.jpg",
         "date": "2026-01-18T13:32:04.000Z",
         "location": {
           "lat": 13.334575000000001,
@@ -203,7 +203,7 @@
       },
       {
         "filename": "PXL_20260118_173218071.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_173218071.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_173218071.jpg",
         "date": "2026-01-18T13:32:18.000Z",
         "location": {
           "lat": 13.334575000000001,
@@ -212,7 +212,7 @@
       },
       {
         "filename": "PXL_20260118_173326951.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_173326951.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_173326951.jpg",
         "date": "2026-01-18T13:33:26.000Z",
         "location": {
           "lat": 13.334575000000001,
@@ -221,7 +221,7 @@
       },
       {
         "filename": "PXL_20260118_173338362.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_173338362.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_173338362.jpg",
         "date": "2026-01-18T13:33:38.000Z",
         "location": {
           "lat": 13.334575000000001,
@@ -230,7 +230,7 @@
       },
       {
         "filename": "PXL_20260118_174143632.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_174143632.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_174143632.jpg",
         "date": "2026-01-18T13:41:43.000Z",
         "location": {
           "lat": 13.334672222222222,
@@ -239,7 +239,7 @@
       },
       {
         "filename": "PXL_20260118_174151905-EDIT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_174151905-EDIT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_174151905-EDIT.jpg",
         "date": "2026-01-18T13:41:51.000Z",
         "location": {
           "lat": 13.334672222222222,
@@ -248,7 +248,7 @@
       },
       {
         "filename": "PXL_20260118_174205340.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_174205340.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_174205340.jpg",
         "date": "2026-01-18T13:42:05.000Z",
         "location": {
           "lat": 13.334672222222222,
@@ -257,7 +257,7 @@
       },
       {
         "filename": "PXL_20260118_181346122.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_181346122.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_181346122.jpg",
         "date": "2026-01-18T14:13:46.000Z",
         "location": {
           "lat": 13.273563888888889,
@@ -266,7 +266,7 @@
       },
       {
         "filename": "PXL_20260118_181856821-EDIT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_181856821-EDIT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_181856821-EDIT.jpg",
         "date": "2026-01-18T14:18:56.000Z",
         "location": {
           "lat": 13.273433333333335,
@@ -275,7 +275,7 @@
       },
       {
         "filename": "PXL_20260118_182428331.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_182428331.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_182428331.jpg",
         "date": "2026-01-18T14:24:28.000Z",
         "location": {
           "lat": 13.273558333333334,
@@ -284,7 +284,7 @@
       },
       {
         "filename": "PXL_20260118_195905306.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_195905306.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_195905306.jpg",
         "date": "2026-01-18T15:59:05.000Z",
         "location": {
           "lat": 13.069444444444445,
@@ -293,7 +293,7 @@
       },
       {
         "filename": "PXL_20260118_195916254.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_195916254.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_195916254.jpg",
         "date": "2026-01-18T15:59:16.000Z",
         "location": {
           "lat": 13.069444444444445,
@@ -302,7 +302,7 @@
       },
       {
         "filename": "PXL_20260118_195925019.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_195925019.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_195925019.jpg",
         "date": "2026-01-18T15:59:25.000Z",
         "location": {
           "lat": 13.069444444444445,
@@ -311,7 +311,7 @@
       },
       {
         "filename": "PXL_20260118_195936568.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_195936568.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_195936568.jpg",
         "date": "2026-01-18T15:59:36.000Z",
         "location": {
           "lat": 13.069444444444445,
@@ -320,7 +320,7 @@
       },
       {
         "filename": "PXL_20260118_195952484-EDIT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_195952484-EDIT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_195952484-EDIT.jpg",
         "date": "2026-01-18T15:59:52.000Z",
         "location": {
           "lat": 13.069444444444445,
@@ -329,7 +329,7 @@
       },
       {
         "filename": "PXL_20260118_200005798-EDIT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_200005798-EDIT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_200005798-EDIT.jpg",
         "date": "2026-01-18T16:00:05.000Z",
         "location": {
           "lat": 13.069444444444445,
@@ -338,7 +338,7 @@
       },
       {
         "filename": "PXL_20260118_200012426.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_200012426.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_200012426.jpg",
         "date": "2026-01-18T16:00:12.000Z",
         "location": {
           "lat": 13.069444444444445,
@@ -347,7 +347,7 @@
       },
       {
         "filename": "PXL_20260118_200056232-EDIT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260118_200056232-EDIT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260118_200056232-EDIT.jpg",
         "date": "2026-01-18T16:00:56.000Z",
         "location": {
           "lat": 13.069444444444445,
@@ -356,7 +356,7 @@
       },
       {
         "filename": "PXL_20260119_003558504.NIGHT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_003558504.NIGHT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_003558504.NIGHT.jpg",
         "date": "2026-01-18T20:35:58.000Z",
         "location": {
           "lat": 13.069511111111112,
@@ -365,7 +365,7 @@
       },
       {
         "filename": "PXL_20260119_160814603.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_160814603.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_160814603.jpg",
         "date": "2026-01-19T12:08:14.000Z",
         "location": {
           "lat": 13.074794444444445,
@@ -374,7 +374,7 @@
       },
       {
         "filename": "PXL_20260119_163300018.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_163300018.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_163300018.jpg",
         "date": "2026-01-19T12:33:00.000Z",
         "location": {
           "lat": 13.074291666666667,
@@ -383,7 +383,7 @@
       },
       {
         "filename": "PXL_20260119_183505598.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_183505598.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_183505598.jpg",
         "date": "2026-01-19T14:35:05.000Z",
         "location": {
           "lat": 13.073925,
@@ -392,7 +392,7 @@
       },
       {
         "filename": "PXL_20260119_183528615.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_183528615.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_183528615.jpg",
         "date": "2026-01-19T14:35:28.000Z",
         "location": {
           "lat": 13.073925,
@@ -401,7 +401,7 @@
       },
       {
         "filename": "PXL_20260119_183541369.PORTRAIT.ORIGINAL.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_183541369.PORTRAIT.ORIGINAL.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_183541369.PORTRAIT.ORIGINAL.jpg",
         "date": "2026-01-19T14:35:41.000Z",
         "location": {
           "lat": 13.073925,
@@ -410,7 +410,7 @@
       },
       {
         "filename": "PXL_20260119_183633213.PORTRAIT.ORIGINAL.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_183633213.PORTRAIT.ORIGINAL.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_183633213.PORTRAIT.ORIGINAL.jpg",
         "date": "2026-01-19T14:36:33.000Z",
         "location": {
           "lat": 13.073913888888889,
@@ -419,7 +419,7 @@
       },
       {
         "filename": "PXL_20260119_185931299~2.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_185931299~2.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_185931299~2.jpg",
         "date": "2026-01-19T14:59:31.000Z",
         "location": {
           "lat": 13.073905555555555,
@@ -428,7 +428,7 @@
       },
       {
         "filename": "PXL_20260119_190030759.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_190030759.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_190030759.jpg",
         "date": "2026-01-19T15:00:30.000Z",
         "location": {
           "lat": 13.073919444444444,
@@ -437,7 +437,7 @@
       },
       {
         "filename": "PXL_20260119_190303776.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_190303776.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_190303776.jpg",
         "date": "2026-01-19T15:03:03.000Z",
         "location": {
           "lat": 13.073891666666666,
@@ -446,7 +446,7 @@
       },
       {
         "filename": "PXL_20260119_190416001.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260119_190416001.jpg",
+        "path": "/trips/barbados-2026/PXL_20260119_190416001.jpg",
         "date": "2026-01-19T15:04:16.000Z",
         "location": {
           "lat": 13.073902777777777,
@@ -455,7 +455,7 @@
       },
       {
         "filename": "PXL_20260120_180149059.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260120_180149059.jpg",
+        "path": "/trips/barbados-2026/PXL_20260120_180149059.jpg",
         "date": "2026-01-20T14:01:49.000Z",
         "location": {
           "lat": 13.074319444444445,
@@ -464,7 +464,7 @@
       },
       {
         "filename": "PXL_20260120_212751302.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260120_212751302.jpg",
+        "path": "/trips/barbados-2026/PXL_20260120_212751302.jpg",
         "date": "2026-01-20T17:27:51.000Z",
         "location": {
           "lat": 13.074169444444443,
@@ -473,7 +473,7 @@
       },
       {
         "filename": "PXL_20260120_220529925.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260120_220529925.jpg",
+        "path": "/trips/barbados-2026/PXL_20260120_220529925.jpg",
         "date": "2026-01-20T18:05:29.000Z",
         "location": {
           "lat": 13.063286111111111,
@@ -482,7 +482,7 @@
       },
       {
         "filename": "PXL_20260120_220535366.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260120_220535366.jpg",
+        "path": "/trips/barbados-2026/PXL_20260120_220535366.jpg",
         "date": "2026-01-20T18:05:35.000Z",
         "location": {
           "lat": 13.063286111111111,
@@ -491,7 +491,7 @@
       },
       {
         "filename": "PXL_20260120_223701812.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260120_223701812.jpg",
+        "path": "/trips/barbados-2026/PXL_20260120_223701812.jpg",
         "date": "2026-01-20T18:37:01.000Z",
         "location": {
           "lat": 13.063475,
@@ -500,7 +500,7 @@
       },
       {
         "filename": "PXL_20260120_223712368.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260120_223712368.jpg",
+        "path": "/trips/barbados-2026/PXL_20260120_223712368.jpg",
         "date": "2026-01-20T18:37:12.000Z",
         "location": {
           "lat": 13.063475,
@@ -509,7 +509,7 @@
       },
       {
         "filename": "PXL_20260120_223733144.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260120_223733144.jpg",
+        "path": "/trips/barbados-2026/PXL_20260120_223733144.jpg",
         "date": "2026-01-20T18:37:33.000Z",
         "location": {
           "lat": 13.063475,
@@ -518,7 +518,7 @@
       },
       {
         "filename": "PXL_20260121_125056477-EFFECTS.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_125056477-EFFECTS.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_125056477-EFFECTS.jpg",
         "date": "2026-01-21T08:50:56.000Z",
         "location": {
           "lat": 13.074266666666666,
@@ -527,7 +527,7 @@
       },
       {
         "filename": "PXL_20260121_125118305.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_125118305.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_125118305.jpg",
         "date": "2026-01-21T08:51:18.000Z",
         "location": {
           "lat": 13.074266666666666,
@@ -536,7 +536,7 @@
       },
       {
         "filename": "PXL_20260121_125403069.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_125403069.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_125403069.jpg",
         "date": "2026-01-21T08:54:03.000Z",
         "location": {
           "lat": 13.074780555555556,
@@ -545,7 +545,7 @@
       },
       {
         "filename": "PXL_20260121_141347878.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_141347878.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_141347878.jpg",
         "date": "2026-01-21T10:13:47.000Z",
         "location": {
           "lat": 13.067583333333333,
@@ -554,7 +554,7 @@
       },
       {
         "filename": "PXL_20260121_180134569.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_180134569.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_180134569.jpg",
         "date": "2026-01-21T14:01:34.000Z",
         "location": {
           "lat": 13.074519444444444,
@@ -563,7 +563,7 @@
       },
       {
         "filename": "PXL_20260121_180146024.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_180146024.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_180146024.jpg",
         "date": "2026-01-21T14:01:46.000Z",
         "location": {
           "lat": 13.074519444444444,
@@ -572,7 +572,7 @@
       },
       {
         "filename": "PXL_20260121_180232828.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_180232828.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_180232828.jpg",
         "date": "2026-01-21T14:02:32.000Z",
         "location": {
           "lat": 13.074519444444444,
@@ -581,7 +581,7 @@
       },
       {
         "filename": "PXL_20260121_181312519.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_181312519.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_181312519.jpg",
         "date": "2026-01-21T14:13:12.000Z",
         "location": {
           "lat": 13.074516666666666,
@@ -590,7 +590,7 @@
       },
       {
         "filename": "PXL_20260121_181319620.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_181319620.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_181319620.jpg",
         "date": "2026-01-21T14:13:19.000Z",
         "location": {
           "lat": 13.07455,
@@ -599,7 +599,7 @@
       },
       {
         "filename": "PXL_20260121_181334368.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_181334368.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_181334368.jpg",
         "date": "2026-01-21T14:13:34.000Z",
         "location": {
           "lat": 13.07455,
@@ -608,7 +608,7 @@
       },
       {
         "filename": "PXL_20260121_221803489.NIGHT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_221803489.NIGHT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_221803489.NIGHT.jpg",
         "date": "2026-01-21T18:18:03.000Z",
         "location": {
           "lat": 13.06861111111111,
@@ -617,7 +617,7 @@
       },
       {
         "filename": "PXL_20260121_221813906.NIGHT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_221813906.NIGHT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_221813906.NIGHT.jpg",
         "date": "2026-01-21T18:18:13.000Z",
         "location": {
           "lat": 13.06861111111111,
@@ -626,7 +626,7 @@
       },
       {
         "filename": "PXL_20260121_232211045.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_232211045.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_232211045.jpg",
         "date": "2026-01-21T19:22:11.000Z",
         "location": {
           "lat": 13.067836111111111,
@@ -635,7 +635,7 @@
       },
       {
         "filename": "PXL_20260121_232237617.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_232237617.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_232237617.jpg",
         "date": "2026-01-21T19:22:37.000Z",
         "location": {
           "lat": 13.067886111111111,
@@ -644,7 +644,7 @@
       },
       {
         "filename": "PXL_20260121_232306639.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260121_232306639.jpg",
+        "path": "/trips/barbados-2026/PXL_20260121_232306639.jpg",
         "date": "2026-01-21T19:23:06.000Z",
         "location": {
           "lat": 13.067886111111111,
@@ -653,7 +653,7 @@
       },
       {
         "filename": "PXL_20260122_124811767~2.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260122_124811767~2.jpg",
+        "path": "/trips/barbados-2026/PXL_20260122_124811767~2.jpg",
         "date": "2026-01-22T08:48:11.000Z",
         "location": {
           "lat": 13.074277777777777,
@@ -662,7 +662,7 @@
       },
       {
         "filename": "PXL_20260122_170206125.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260122_170206125.jpg",
+        "path": "/trips/barbados-2026/PXL_20260122_170206125.jpg",
         "date": "2026-01-22T13:02:06.000Z",
         "location": {
           "lat": 13.073430555555555,
@@ -671,7 +671,7 @@
       },
       {
         "filename": "PXL_20260122_170218359.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260122_170218359.jpg",
+        "path": "/trips/barbados-2026/PXL_20260122_170218359.jpg",
         "date": "2026-01-22T13:02:18.000Z",
         "location": {
           "lat": 13.073447222222223,
@@ -680,7 +680,7 @@
       },
       {
         "filename": "PXL_20260122_170828916.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260122_170828916.jpg",
+        "path": "/trips/barbados-2026/PXL_20260122_170828916.jpg",
         "date": "2026-01-22T13:08:28.000Z",
         "location": {
           "lat": 13.073802777777777,
@@ -689,7 +689,7 @@
       },
       {
         "filename": "PXL_20260122_170834652.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260122_170834652.jpg",
+        "path": "/trips/barbados-2026/PXL_20260122_170834652.jpg",
         "date": "2026-01-22T13:08:34.000Z",
         "location": {
           "lat": 13.073802777777777,
@@ -698,7 +698,7 @@
       },
       {
         "filename": "PXL_20260122_170851211.PORTRAIT.ORIGINAL.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260122_170851211.PORTRAIT.ORIGINAL.jpg",
+        "path": "/trips/barbados-2026/PXL_20260122_170851211.PORTRAIT.ORIGINAL.jpg",
         "date": "2026-01-22T13:08:51.000Z",
         "location": {
           "lat": 13.073802777777777,
@@ -707,7 +707,7 @@
       },
       {
         "filename": "PXL_20260122_170924743.PORTRAIT.ORIGINAL.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260122_170924743.PORTRAIT.ORIGINAL.jpg",
+        "path": "/trips/barbados-2026/PXL_20260122_170924743.PORTRAIT.ORIGINAL.jpg",
         "date": "2026-01-22T13:09:24.000Z",
         "location": {
           "lat": 13.073802777777777,
@@ -716,7 +716,7 @@
       },
       {
         "filename": "PXL_20260122_223148120.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260122_223148120.jpg",
+        "path": "/trips/barbados-2026/PXL_20260122_223148120.jpg",
         "date": "2026-01-22T18:31:48.000Z",
         "location": {
           "lat": 13.069424999999999,
@@ -725,7 +725,7 @@
       },
       {
         "filename": "PXL_20260122_233204918.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260122_233204918.jpg",
+        "path": "/trips/barbados-2026/PXL_20260122_233204918.jpg",
         "date": "2026-01-22T19:32:04.000Z",
         "location": {
           "lat": 13.069569444444443,
@@ -734,7 +734,7 @@
       },
       {
         "filename": "PXL_20260123_111156023~2.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_111156023~2.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_111156023~2.jpg",
         "date": "2026-01-23T07:11:56.000Z",
         "location": {
           "lat": 13.07476111111111,
@@ -743,7 +743,7 @@
       },
       {
         "filename": "PXL_20260123_120836316.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_120836316.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_120836316.jpg",
         "date": "2026-01-23T08:08:36.000Z",
         "location": {
           "lat": 13.074158333333333,
@@ -752,7 +752,7 @@
       },
       {
         "filename": "PXL_20260123_120842651.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_120842651.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_120842651.jpg",
         "date": "2026-01-23T08:08:42.000Z",
         "location": {
           "lat": 13.074158333333333,
@@ -761,7 +761,7 @@
       },
       {
         "filename": "PXL_20260123_120902684.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_120902684.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_120902684.jpg",
         "date": "2026-01-23T08:09:02.000Z",
         "location": {
           "lat": 13.074158333333333,
@@ -770,7 +770,7 @@
       },
       {
         "filename": "PXL_20260123_120915712.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_120915712.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_120915712.jpg",
         "date": "2026-01-23T08:09:15.000Z",
         "location": {
           "lat": 13.074158333333333,
@@ -779,7 +779,7 @@
       },
       {
         "filename": "PXL_20260123_120923649~2.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_120923649~2.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_120923649~2.jpg",
         "date": "2026-01-23T08:09:23.000Z",
         "location": {
           "lat": 13.074158333333333,
@@ -788,7 +788,7 @@
       },
       {
         "filename": "PXL_20260123_121029594.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_121029594.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_121029594.jpg",
         "date": "2026-01-23T08:10:29.000Z",
         "location": {
           "lat": 13.073855555555555,
@@ -797,7 +797,7 @@
       },
       {
         "filename": "PXL_20260123_121102043.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_121102043.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_121102043.jpg",
         "date": "2026-01-23T08:11:02.000Z",
         "location": {
           "lat": 13.073505555555556,
@@ -806,7 +806,7 @@
       },
       {
         "filename": "PXL_20260123_121618654-EDIT.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_121618654-EDIT.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_121618654-EDIT.jpg",
         "date": "2026-01-23T08:16:18.000Z",
         "location": {
           "lat": 13.073908333333334,
@@ -815,7 +815,7 @@
       },
       {
         "filename": "PXL_20260123_121628017.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_121628017.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_121628017.jpg",
         "date": "2026-01-23T08:16:28.000Z",
         "location": {
           "lat": 13.073908333333334,
@@ -824,7 +824,7 @@
       },
       {
         "filename": "PXL_20260123_121740004.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_121740004.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_121740004.jpg",
         "date": "2026-01-23T08:17:40.000Z",
         "location": {
           "lat": 13.073908333333334,
@@ -833,7 +833,7 @@
       },
       {
         "filename": "PXL_20260123_121831130.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_121831130.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_121831130.jpg",
         "date": "2026-01-23T08:18:31.000Z",
         "location": {
           "lat": 13.073830555555555,
@@ -842,7 +842,7 @@
       },
       {
         "filename": "PXL_20260123_123117573~2.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_123117573~2.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_123117573~2.jpg",
         "date": "2026-01-23T08:31:17.000Z",
         "location": {
           "lat": 13.073980555555556,
@@ -851,13 +851,61 @@
       },
       {
         "filename": "FB_IMG_1768972960643.jpg",
-        "path": "/trips/Barbados 2026/FB_IMG_1768972960643.jpg",
+        "path": "/trips/barbados-2026/FB_IMG_1768972960643.jpg",
+        "date": null,
+        "location": null
+      },
+      {
+        "filename": "PXL_20260118_173237273.mp4",
+        "path": "/trips/barbados-2026/PXL_20260118_173237273.mp4",
+        "date": null,
+        "location": null
+      },
+      {
+        "filename": "PXL_20260118_173439122.mp4",
+        "path": "/trips/barbados-2026/PXL_20260118_173439122.mp4",
+        "date": null,
+        "location": null
+      },
+      {
+        "filename": "PXL_20260118_174051564.mp4",
+        "path": "/trips/barbados-2026/PXL_20260118_174051564.mp4",
+        "date": null,
+        "location": null
+      },
+      {
+        "filename": "PXL_20260118_174109325.mp4",
+        "path": "/trips/barbados-2026/PXL_20260118_174109325.mp4",
+        "date": null,
+        "location": null
+      },
+      {
+        "filename": "PXL_20260118_181240593.mp4",
+        "path": "/trips/barbados-2026/PXL_20260118_181240593.mp4",
+        "date": null,
+        "location": null
+      },
+      {
+        "filename": "PXL_20260118_181301225.mp4",
+        "path": "/trips/barbados-2026/PXL_20260118_181301225.mp4",
+        "date": null,
+        "location": null
+      },
+      {
+        "filename": "PXL_20260118_181411403.mp4",
+        "path": "/trips/barbados-2026/PXL_20260118_181411403.mp4",
+        "date": null,
+        "location": null
+      },
+      {
+        "filename": "PXL_20260118_181436836.mp4",
+        "path": "/trips/barbados-2026/PXL_20260118_181436836.mp4",
         "date": null,
         "location": null
       },
       {
         "filename": "PXL_20260123_183248434.jpg",
-        "path": "/trips/Barbados 2026/PXL_20260123_183248434.jpg",
+        "path": "/trips/barbados-2026/PXL_20260123_183248434.jpg",
         "date": "2026-01-23T14:32:48.000Z",
         "location": {
           "lat": 13.079472222222222,
