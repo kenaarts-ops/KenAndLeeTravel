@@ -4,6 +4,7 @@ import fs from 'fs'
 import path from 'path'
 
 export default function Home() {
+  const basePath = '/KenAndLeeTravel';
   const dataPath = path.join(process.cwd(), 'src/data/trips.json');
   let trips = [];
   try {
@@ -18,7 +19,7 @@ export default function Home() {
       <section style={{ height: '90vh', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: -1 }}>
           <Image
-            src="/hero.png"
+            src={`${basePath}/hero.png`}
             alt="Travel background"
             fill
             style={{ objectFit: 'cover' }}
@@ -52,7 +53,7 @@ export default function Home() {
             <Link href={`/trips/${trip.id}`} key={trip.id}>
               <div className="trip-card">
                 <Image
-                  src={trip.coverImage || '/hero.png'}
+                  src={trip.coverImage ? `${basePath}${trip.coverImage}` : `${basePath}/hero.png`}
                   alt={trip.title}
                   fill
                   className="trip-card-image"

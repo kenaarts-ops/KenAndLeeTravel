@@ -13,9 +13,10 @@ export async function generateStaticParams() {
 }
 
 export default function TripPage({ params }) {
+    const basePath = '/KenAndLeeTravel';
     const dataPath = path.join(process.cwd(), 'src/data/trips.json');
     const trips = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-    const trip = trips.find(t => t.id === params.id);
+    const trip = trips.find(t => t.id === decodeURIComponent(params.id));
 
     if (!trip) {
         return <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Trip Not Found</div>;
@@ -30,7 +31,7 @@ export default function TripPage({ params }) {
             {/* Hero */}
             <section style={{ height: '60vh', position: 'relative', display: 'flex', alignItems: 'flex-end', padding: '4rem 5%' }}>
                 <div style={{ position: 'absolute', inset: 0, zIndex: -1 }}>
-                    <Image src={trip.coverImage} alt={trip.title} fill style={{ objectFit: 'cover' }} priority />
+                    <Image src={`${basePath}${trip.coverImage}`} alt={trip.title} fill style={{ objectFit: 'cover' }} priority />
                     <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15,23,42,1) 0%, rgba(15,23,42,0.5) 50%, rgba(15,23,42,0.8) 100%)' }}></div>
                 </div>
 
@@ -59,7 +60,7 @@ export default function TripPage({ params }) {
                     <div className="trip-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))' }}>
                         {trip.images.map((img, idx) => (
                             <div key={idx} style={{ position: 'relative', aspectRatio: '1/1', borderRadius: '16px', overflow: 'hidden' }}>
-                                <Image src={img.path} alt={img.filename} fill style={{ objectFit: 'cover' }} />
+                                <Image src={`${basePath}${img.path}`} alt={img.filename} fill style={{ objectFit: 'cover' }} />
                             </div>
                         ))}
                     </div>
