@@ -70,16 +70,66 @@ function ingestAlbums() {
                 return new Date(a.date) - new Date(b.date);
             });
 
+            // Group rapid sequences (within 5 seconds) and pick the best image
+            const deduplicatedImages = [];
+            const TIME_WINDOW_MS = 5000;
+            let currentGroup = [];
+
+            for (const img of tripImages) {
+                if (!img.date) {
+                    deduplicatedImages.push(img);
+                    continue;
+                }
+
+                if (currentGroup.length === 0) {
+                    currentGroup.push(img);
+                } else {
+                    const groupStartTime = new Date(currentGroup[0].date).getTime();
+                    const imgTime = new Date(img.date).getTime();
+
+                    if (imgTime - groupStartTime <= TIME_WINDOW_MS) {
+                        currentGroup.push(img);
+                    } else {
+                        // Pick the best of the current group and start a new one
+                        deduplicatedImages.push(selectBestImageFromBurst(currentGroup));
+                        currentGroup = [img];
+                    }
+                }
+            }
+
+            // Push the last group
+            if (currentGroup.length > 0) {
+                deduplicatedImages.push(selectBestImageFromBurst(currentGroup));
+            }
+
+            // Helper function to rank and select the best image in a sequence
+            function selectBestImageFromBurst(group) {
+                if (group.length === 1) return group[0];
+
+                return group.reduce((best, current) => {
+                    const getScore = (img) => {
+                        const name = img.filename.toUpperCase();
+                        let score = 0;
+                        if (name.includes('-EDIT') || name.includes('-EFFECTS')) score += 100; // Highest priority
+                        else if (!name.includes('~') && !name.includes('.ORIGINAL') && !name.includes('PORTRAIT')) score += 50; // Optimized original
+                        else if (name.includes('PORTRAIT')) score += 20; // Portrait mode
+                        return score;
+                    };
+
+                    return getScore(current) > getScore(best) ? current : best;
+                });
+            }
+
             // Format title (e.g., "tokyo-2023" -> "Tokyo 2023")
             const title = tripId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
             trips.push({
                 id: tripId,
                 title: title,
-                coverImage: tripImages.length > 0 ? tripImages[0].path : null,
+                coverImage: deduplicatedImages.length > 0 ? deduplicatedImages[0].path : null,
                 startDate: minDate ? new Date(minDate).toISOString() : null,
                 endDate: maxDate ? new Date(maxDate).toISOString() : null,
-                images: tripImages
+                images: deduplicatedImages
             });
         }
     }
