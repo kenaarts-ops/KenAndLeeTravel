@@ -61,7 +61,11 @@ export default function TripGallery({ images }) {
                         onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
                         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                     >
-                        <Image src={`${basePath}${img.path}`} alt={img.filename} fill style={{ objectFit: 'cover' }} />
+                        {img.filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
+                            <video src={`${basePath}${img.path}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} muted loop playsInline />
+                        ) : (
+                            <Image src={`${basePath}${img.path}`} alt={img.filename} fill style={{ objectFit: 'cover' }} />
+                        )}
                     </div>
                 ))}
             </div>
@@ -122,18 +126,25 @@ export default function TripGallery({ images }) {
                         </button>
                     )}
 
-                    {/* Image Container */}
                     <div
-                        style={{ position: 'relative', width: '90vw', height: '90vh' }}
+                        style={{ position: 'relative', width: '90vw', height: '90vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                         onClick={(e) => e.stopPropagation()} // Prevent clicks on the image from closing the modal
                     >
-                        <Image
-                            src={`${basePath}${images[selectedPhotoIndex].path}`}
-                            alt={images[selectedPhotoIndex].filename}
-                            fill
-                            style={{ objectFit: 'contain' }}
-                            quality={100}
-                        />
+                        {images[selectedPhotoIndex].filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
+                            <video
+                                src={`${basePath}${images[selectedPhotoIndex].path}`}
+                                controls
+                                autoPlay
+                                style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+                            />
+                        ) : (
+                            <Image
+                                src={`${basePath}${images[selectedPhotoIndex].path}`}
+                                alt={images[selectedPhotoIndex].filename}
+                                fill
+                                style={{ objectFit: 'contain' }}
+                            />
+                        )}
                     </div>
 
                     {/* Next Button */}
