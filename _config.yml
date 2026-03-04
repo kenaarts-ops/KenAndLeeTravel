@@ -1,5 +1,7 @@
-title: Ken and Lee Travel
-description: Our travel adventures
-theme: minima
-header_pages:
-  - index.md 
+title: Ken & Lee Travel
+description: Travel memories through photos
+theme: jekyll-theme-antigravity
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
