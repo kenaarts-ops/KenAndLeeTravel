@@ -138,14 +138,14 @@ export default function TripGallery({ images }) {
                                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                             />
                         ) : (
-                            <img
+                            <Image
                                 src={`${basePath}${images[selectedPhotoIndex].path}`}
                                 alt={images[selectedPhotoIndex].filename}
+                                fill
+                                unoptimized={true}
                                 style={{
-                                    width: '100%',
-                                    height: '100%',
                                     objectFit: 'contain',
-                                    backgroundImage: `url('${basePath}${images[selectedPhotoIndex].thumbnail || images[selectedPhotoIndex].path}')`,
+                                    backgroundImage: `url(${basePath}${images[selectedPhotoIndex].thumbnail || images[selectedPhotoIndex].path})`,
                                     backgroundSize: 'contain',
                                     backgroundPosition: 'center',
                                     backgroundRepeat: 'no-repeat'
