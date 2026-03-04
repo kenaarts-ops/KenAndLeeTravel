@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const ExifParser = require('exif-parser');
+const sharp = require('sharp');
 
 const tripsDir = path.join(__dirname, '../public/trips');
 const outputDataFile = path.join(__dirname, '../src/data/trips.json');
@@ -10,7 +11,7 @@ if (!fs.existsSync(tripsDir)) fs.mkdirSync(tripsDir, { recursive: true });
 const dataDir = path.dirname(outputDataFile);
 if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
-function ingestAlbums() {
+async function ingestAlbums() {
     const trips = [];
     const items = fs.readdirSync(tripsDir, { withFileTypes: true });
 
@@ -19,7 +20,7 @@ function ingestAlbums() {
             const originalFolderName = item.name;
             const tripId = originalFolderName.toLowerCase().replace(/\s+/g, '-');
             const tripPath = path.join(tripsDir, originalFolderName);
-            const files = fs.readdirSync(tripPath).filter(f => f.match(/\.(jpg|jpeg|png|mp4|mov)$/i));
+            const files = fs.readdirSync(tripPath).filter(f => f.match(/\.(jpg|jpeg|png|mp4|mov)$/i) && !f.endsWith('.thumb.jpg'));
 
             const tripImages = [];
             let minDate = null;
@@ -27,16 +28,35 @@ function ingestAlbums() {
 
             for (const file of files) {
                 const filePath = path.join(tripPath, file);
-                const buffer = fs.readFileSync(filePath);
+                const isImage = file.match(/\.(jpg|jpeg|png)$/i);
 
                 let meta = {
                     filename: file,
                     path: `/trips/${tripId}/${file}`,
+                    thumbnail: `/trips/${tripId}/${file}`, // Fallback to original
                     date: null,
                     location: null
                 };
 
-                if (file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg')) {
+                if (isImage) {
+                    const thumbFilename = file + '.thumb.jpg';
+                    const thumbPath = path.join(tripPath, thumbFilename);
+                    meta.thumbnail = `/trips/${tripId}/${thumbFilename}`;
+
+                    if (!fs.existsSync(thumbPath)) {
+                        console.log(`Generating thumbnail for ${file}...`);
+                        try {
+                            await sharp(filePath)
+                                .resize(600, 600, { fit: 'inside', withoutEnlargement: true })
+                                .jpeg({ quality: 80 })
+                                .toFile(thumbPath);
+                        } catch (e) {
+                            console.error(`Failed to generate thumbnail for ${file}:`, e.message);
+                            meta.thumbnail = meta.path; // Fallback to original if failure
+                        }
+                    }
+
+                    const buffer = fs.readFileSync(filePath);
                     try {
                         const parser = ExifParser.create(buffer);
                         const result = parser.parse();
@@ -127,7 +147,7 @@ function ingestAlbums() {
             trips.push({
                 id: tripId,
                 title: title,
-                coverImage: deduplicatedImages.length > 0 ? deduplicatedImages[0].path : null,
+                coverImage: deduplicatedImages.length > 0 ? deduplicatedImages[0].thumbnail : null,
                 startDate: minDate ? new Date(minDate).toISOString() : null,
                 endDate: maxDate ? new Date(maxDate).toISOString() : null,
                 images: deduplicatedImages
@@ -148,4 +168,4 @@ function ingestAlbums() {
     console.log(`Ingested ${trips.length} trips! Data saved to ${outputDataFile}`);
 }
 
-ingestAlbums();
+ingestAlbums().catch(console.error);

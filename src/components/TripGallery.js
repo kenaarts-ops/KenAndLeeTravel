@@ -64,7 +64,7 @@ export default function TripGallery({ images }) {
                         {img.filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
                             <video src={`${basePath}${img.path}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} muted loop playsInline />
                         ) : (
-                            <Image src={`${basePath}${img.path}`} alt={img.filename} fill style={{ objectFit: 'cover' }} />
+                            <Image src={`${basePath}${img.thumbnail || img.path}`} alt={img.filename} fill style={{ objectFit: 'cover', backgroundColor: '#1e293b' }} />
                         )}
                     </div>
                 ))}
