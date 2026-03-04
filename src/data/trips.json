@@ -1,0 +1,32 @@
+[
+  {
+    "id": "iceland-winter",
+    "title": "Iceland Winter",
+    "coverImage": "/trips/iceland-winter/waterfall.png",
+    "startDate": null,
+    "endDate": null,
+    "images": [
+      {
+        "filename": "waterfall.png",
+        "path": "/trips/iceland-winter/waterfall.png",
+        "date": null,
+        "location": null
+      }
+    ]
+  },
+  {
+    "id": "tokyo-2023",
+    "title": "Tokyo 2023",
+    "coverImage": "/trips/tokyo-2023/cover.png",
+    "startDate": null,
+    "endDate": null,
+    "images": [
+      {
+        "filename": "cover.png",
+        "path": "/trips/tokyo-2023/cover.png",
+        "date": null,
+        "location": null
+      }
+    ]
+  }
+]
