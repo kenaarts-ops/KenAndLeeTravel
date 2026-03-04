@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Image from 'next/image';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
 const Map = dynamic(() => import('@/components/Map'), { ssr: false });
@@ -34,7 +35,7 @@ export default function TripPage({ params }) {
                 </div>
 
                 <div style={{ zIndex: 1, position: 'relative', width: '100%' }} className="animate-fade-in-up">
-                    <a href="/" style={{ color: 'var(--accent)', fontWeight: 600, display: 'inline-block', marginBottom: '1rem' }}>&larr; Back to Destinations</a>
+                    <Link href="/" style={{ color: 'var(--accent)', fontWeight: 600, display: 'inline-block', marginBottom: '1rem' }}>&larr; Back to Destinations</Link>
                     <h1 className="display" style={{ color: '#fff', fontSize: '4rem', marginBottom: '0.5rem' }}>
                         {trip.title}
                     </h1>
