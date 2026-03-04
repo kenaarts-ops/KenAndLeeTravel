@@ -5,11 +5,12 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
 const Map = dynamic(() => import('@/components/Map'), { ssr: false });
+import TripGallery from '@/components/TripGallery';
 
 export async function generateStaticParams() {
     const dataPath = path.join(process.cwd(), 'src/data/trips.json');
     const trips = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-    return trips.map((trip) => ({ id: trip.id }));
+    return trips.map((trip) => ({ id: encodeURIComponent(trip.id) }));
 }
 
 export default function TripPage({ params }) {
@@ -57,13 +58,7 @@ export default function TripPage({ params }) {
 
                 <div className="animate-fade-in-up delay-2">
                     <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', marginBottom: '1.5rem', color: '#fff' }}>Gallery</h2>
-                    <div className="trip-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))' }}>
-                        {trip.images.map((img, idx) => (
-                            <div key={idx} style={{ position: 'relative', aspectRatio: '1/1', borderRadius: '16px', overflow: 'hidden' }}>
-                                <Image src={`${basePath}${img.path}`} alt={img.filename} fill style={{ objectFit: 'cover' }} />
-                            </div>
-                        ))}
-                    </div>
+                    <TripGallery images={trip.images} />
                 </div>
             </section>
         </main>
