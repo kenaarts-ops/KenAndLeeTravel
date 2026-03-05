@@ -127,7 +127,7 @@ export default function TripGallery({ images }) {
                     )}
 
                     <div
-                        style={{ position: 'relative', width: '90vw', height: '90vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                        style={{ position: 'fixed', inset: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1002 }}
                         onClick={(e) => e.stopPropagation()} // Prevent clicks on the image from closing the modal
                     >
                         {images[selectedPhotoIndex].filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
@@ -135,15 +135,15 @@ export default function TripGallery({ images }) {
                                 src={`${basePath}${images[selectedPhotoIndex].path}`}
                                 controls
                                 autoPlay
-                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                style={{ maxWidth: '90vw', maxHeight: '90vh', objectFit: 'contain' }}
                             />
                         ) : (
-                            <Image
+                            <img
                                 src={`${basePath}${images[selectedPhotoIndex].path}`}
                                 alt={images[selectedPhotoIndex].filename}
-                                fill
-                                unoptimized={true}
                                 style={{
+                                    maxWidth: '90vw',
+                                    maxHeight: '90vh',
                                     objectFit: 'contain',
                                     backgroundImage: `url(${basePath}${images[selectedPhotoIndex].thumbnail || images[selectedPhotoIndex].path})`,
                                     backgroundSize: 'contain',
