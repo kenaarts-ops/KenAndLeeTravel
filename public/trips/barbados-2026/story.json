@@ -4,41 +4,86 @@
     {
       "date": "2026-01-16",
       "location": "",
-      "description": ""
+      "description": "Arriving at Grantley Adams Internation Airport near Bridgetown"
     },
     {
       "date": "2026-01-17",
-      "location": "",
+      "location": "Bridgetown",
+      "description": "An interesting little pet market (I hope)."
+    },
+    {
+      "date": "2026-01-18",
+      "location": "St. Lawrence",
       "description": ""
     },
     {
       "date": "2026-01-18",
-      "location": "",
+      "location": "Oistins",
+      "description": "Beach with BBQs, 100's of vendors, and a lot of boat traffic"
+    },
+    {
+      "date": "2026-01-18",
+      "location": "Bridgetown",
+      "description": "A kind of unique intersection. Two one way streets arriving, and two different one way streets departing"
+    },
+    {
+      "date": "2026-01-18",
+      "location": "Greenidge",
       "description": ""
+    },
+    {
+      "date": "2026-01-18",
+      "location": "Morgan Lewis",
+      "description": "... and the steam railway at St, Nic"
+    },
+    {
+      "date": "2026-01-18",
+      "location": "St. Lawrence",
+      "description": "It's amazing how we find chickens just about everywhere we travel"
     },
     {
       "date": "2026-01-19",
-      "location": "",
-      "description": ""
+      "location": "St. Lawrence",
+      "description": "Behind our hotel"
+    },
+    {
+      "date": "2026-01-19",
+      "location": "Barbados",
+      "description": "The beach across from our hotel"
     },
     {
       "date": "2026-01-20",
-      "location": "",
+      "location": "St. Lawrence",
+      "description": "The Reggae bus was a great way to get around."
+    },
+    {
+      "date": "2026-01-20",
+      "location": "Oistins",
       "description": ""
     },
     {
       "date": "2026-01-21",
-      "location": "",
+      "location": "Barbados",
+      "description": "Along the boardwalk"
+    },
+    {
+      "date": "2026-01-21",
+      "location": "St. Lawrence",
       "description": ""
     },
     {
       "date": "2026-01-22",
-      "location": "",
+      "location": "St. Lawrence",
       "description": ""
     },
     {
       "date": "2026-01-23",
-      "location": "",
+      "location": "St. Lawrence",
+      "description": ""
+    },
+    {
+      "date": "2026-01-23",
+      "location": "Barbados",
       "description": ""
     }
   ]

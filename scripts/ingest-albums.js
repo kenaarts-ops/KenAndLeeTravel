@@ -11,6 +11,36 @@ if (!fs.existsSync(tripsDir)) fs.mkdirSync(tripsDir, { recursive: true });
 const dataDir = path.dirname(outputDataFile);
 if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
+// Helper function for reverse geocoding
+const NodeGeocoder = require('node-geocoder');
+const geocoder = NodeGeocoder({ provider: 'openstreetmap' });
+const cacheFile = path.join(__dirname, '../src/data/geocode-cache.json');
+let geoCache = {};
+if (fs.existsSync(cacheFile)) geoCache = JSON.parse(fs.readFileSync(cacheFile));
+
+async function getLocationString(lat, lng) {
+    if (!lat || !lng) return null;
+    const key = `${lat.toFixed(2)},${lng.toFixed(2)}`;
+    if (geoCache[key]) return geoCache[key];
+
+    try {
+        await new Promise(r => setTimeout(r, 1050)); // Nominatim 1req/s limit
+        const res = await geocoder.reverse({ lat, lon: lng });
+        if (res && res.length > 0) {
+            const r = res[0];
+            const loc = r.city || r.town || r.village || r.hamlet || r.neighbourhood || r.county || r.country || "";
+            geoCache[key] = loc;
+            fs.writeFileSync(cacheFile, JSON.stringify(geoCache, null, 2));
+            return loc;
+        }
+    } catch (e) {
+        console.error("Geocode error", e.message);
+    }
+    geoCache[key] = "";
+    fs.writeFileSync(cacheFile, JSON.stringify(geoCache, null, 2));
+    return "";
+}
+
 async function ingestAlbums() {
     const trips = [];
     const items = fs.readdirSync(tripsDir, { withFileTypes: true });
@@ -144,25 +174,49 @@ async function ingestAlbums() {
             // Format title (e.g., "barbados-2026" -> "Barbados 2026")
             const title = originalFolderName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
-            // Group deduplicated images by Date
-            const daysMap = {};
+            // Group deduplicated images by Date AND Relative Location
+            const sections = [];
+            let currentSection = null;
+            let tripDayIndex = 0;
+            let activityIndex = 1;
+
             for (const img of deduplicatedImages) {
                 if (!img.date) continue;
-                // Get local-ish date string by shifting tz offset or just using ISO date part
-                // The EXIF DateTimeOriginal is usually local time without timezone.
-                // We stored it as ISO string treating it like UTC, so split('T')[0] works.
                 const dateString = img.date.split('T')[0];
+                let locString = "";
 
-                if (!daysMap[dateString]) {
-                    daysMap[dateString] = {
+                if (img.location) {
+                    locString = await getLocationString(img.location.lat, img.location.lng);
+                }
+
+                // If locString is empty, inherit from previous image in the same day to avoid splitting just because of missing GPS
+                if (!locString && currentSection && currentSection.date === dateString) {
+                    locString = currentSection.location;
+                }
+
+                // Start a new section if the date changes, or the location strongly changes
+                if (!currentSection || currentSection.date !== dateString || (locString && currentSection.location !== locString)) {
+                    // Update trip day index if the date actually changed
+                    if (!currentSection || currentSection.date !== dateString) {
+                        tripDayIndex++;
+                        activityIndex = 1;
+                    } else {
+                        activityIndex++;
+                    }
+
+                    const dayTitleStr = activityIndex === 1 ? `Day ${tripDayIndex}` : `Day ${tripDayIndex} - Part ${activityIndex}`;
+
+                    currentSection = {
+                        dayTitle: dayTitleStr,
                         date: dateString,
+                        location: locString || "",
                         images: []
                     };
+                    sections.push(currentSection);
                 }
-                daysMap[dateString].images.push(img);
-            }
 
-            const dayObjects = Object.values(daysMap).sort((a, b) => a.date.localeCompare(b.date));
+                currentSection.images.push(img);
+            }
 
             // Generate or merge story.json scaffolding
             const storyPath = path.join(tripPath, 'story.json');
@@ -176,14 +230,31 @@ async function ingestAlbums() {
                 }
             }
 
-            const finalDays = dayObjects.map((dayObj, index) => {
-                const existingDayData = existingStory.days.find(d => d.date === dayObj.date);
+            // Map sections to final output, attempting to preserve user descriptions if they match date & location (or just date for the first item)
+            // We use a consumed index to ensure we don't duplicate existing stories
+            const consumedStoryIndexes = new Set();
+
+            const finalDays = sections.map((sec, index) => {
+                // Try to find an existing story entry that matches this date AND location
+                let existingDayDataIndex = existingStory.days.findIndex((d, i) => d.date === sec.date && d.location === sec.location && !consumedStoryIndexes.has(i));
+
+                // If not found, try to find an existing story entry that just matches the date (for backward compatibility before locations existed)
+                if (existingDayDataIndex === -1) {
+                    existingDayDataIndex = existingStory.days.findIndex((d, i) => d.date === sec.date && !consumedStoryIndexes.has(i));
+                }
+
+                let finalDescription = "";
+                if (existingDayDataIndex !== -1) {
+                    consumedStoryIndexes.add(existingDayDataIndex);
+                    finalDescription = existingStory.days[existingDayDataIndex].description;
+                }
+
                 return {
-                    dayTitle: `Day ${index + 1}`,
-                    date: dayObj.date,
-                    location: existingDayData ? existingDayData.location : "",
-                    description: existingDayData ? existingDayData.description : "",
-                    images: dayObj.images
+                    dayTitle: sec.dayTitle,
+                    date: sec.date,
+                    location: sec.location,
+                    description: finalDescription,
+                    images: sec.images
                 };
             });
 

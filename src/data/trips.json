@@ -10,7 +10,7 @@
         "dayTitle": "Day 1",
         "date": "2026-01-16",
         "location": "",
-        "description": "",
+        "description": "Arriving at Grantley Adams Internation Airport near Bridgetown",
         "images": [
           {
             "filename": "PXL_20260116_201636212-EDIT.jpg",
@@ -24,8 +24,8 @@
       {
         "dayTitle": "Day 2",
         "date": "2026-01-17",
-        "location": "",
-        "description": "",
+        "location": "Bridgetown",
+        "description": "An interesting little pet market (I hope).",
         "images": [
           {
             "filename": "PXL_20260117_170424440.jpg",
@@ -42,23 +42,13 @@
       {
         "dayTitle": "Day 3",
         "date": "2026-01-18",
-        "location": "",
+        "location": "St. Lawrence",
         "description": "",
         "images": [
           {
-            "filename": "PXL_20260118_135246372.jpg",
-            "path": "/trips/barbados-2026/PXL_20260118_135246372.jpg",
-            "thumbnail": "/trips/barbados-2026/PXL_20260118_135246372.jpg.thumb.jpg",
-            "date": "2026-01-18T09:52:46.000Z",
-            "location": {
-              "lat": 13.073197222222221,
-              "lng": -59.588097222222224
-            }
-          },
-          {
-            "filename": "PXL_20260118_135254484.jpg",
-            "path": "/trips/barbados-2026/PXL_20260118_135254484.jpg",
-            "thumbnail": "/trips/barbados-2026/PXL_20260118_135254484.jpg.thumb.jpg",
+            "filename": "PXL_20260118_135254484~2.jpg",
+            "path": "/trips/barbados-2026/PXL_20260118_135254484~2.jpg",
+            "thumbnail": "/trips/barbados-2026/PXL_20260118_135254484~2.jpg.thumb.jpg",
             "date": "2026-01-18T09:52:54.000Z",
             "location": {
               "lat": 13.073197222222221,
@@ -74,7 +64,15 @@
               "lat": 13.073197222222221,
               "lng": -59.588097222222224
             }
-          },
+          }
+        ]
+      },
+      {
+        "dayTitle": "Day 3 - Part 2",
+        "date": "2026-01-18",
+        "location": "Oistins",
+        "description": "Beach with BBQs, 100's of vendors, and a lot of boat traffic",
+        "images": [
           {
             "filename": "original_bda8cb34-e2cf-4c20-adb0-8fc1e99e79dc_PXL_20260118_144114435~2.jpg",
             "path": "/trips/barbados-2026/original_bda8cb34-e2cf-4c20-adb0-8fc1e99e79dc_PXL_20260118_144114435~2.jpg",
@@ -194,7 +192,15 @@
               "lat": 13.064433333333334,
               "lng": -59.54418888888889
             }
-          },
+          }
+        ]
+      },
+      {
+        "dayTitle": "Day 3 - Part 3",
+        "date": "2026-01-18",
+        "location": "Bridgetown",
+        "description": "A kind of unique intersection. Two one way streets arriving, and two different one way streets departing",
+        "images": [
           {
             "filename": "PXL_20260118_161139901~2.jpg",
             "path": "/trips/barbados-2026/PXL_20260118_161139901~2.jpg",
@@ -204,7 +210,15 @@
               "lat": 13.097238888888889,
               "lng": -59.61311388888889
             }
-          },
+          }
+        ]
+      },
+      {
+        "dayTitle": "Day 3 - Part 4",
+        "date": "2026-01-18",
+        "location": "Greenidge",
+        "description": "",
+        "images": [
           {
             "filename": "PXL_20260118_173109230.jpg",
             "path": "/trips/barbados-2026/PXL_20260118_173109230.jpg",
@@ -304,7 +318,15 @@
               "lat": 13.334672222222222,
               "lng": -59.61351666666667
             }
-          },
+          }
+        ]
+      },
+      {
+        "dayTitle": "Day 3 - Part 5",
+        "date": "2026-01-18",
+        "location": "Morgan Lewis",
+        "description": "... and the steam railway at St, Nic",
+        "images": [
           {
             "filename": "PXL_20260118_181346122.jpg",
             "path": "/trips/barbados-2026/PXL_20260118_181346122.jpg",
@@ -334,7 +356,15 @@
               "lat": 13.273558333333334,
               "lng": -59.584922222222225
             }
-          },
+          }
+        ]
+      },
+      {
+        "dayTitle": "Day 3 - Part 6",
+        "date": "2026-01-18",
+        "location": "St. Lawrence",
+        "description": "It's amazing how we find chickens just about everywhere we travel",
+        "images": [
           {
             "filename": "PXL_20260118_195905306.jpg",
             "path": "/trips/barbados-2026/PXL_20260118_195905306.jpg",
@@ -430,8 +460,8 @@
       {
         "dayTitle": "Day 4",
         "date": "2026-01-19",
-        "location": "",
-        "description": "",
+        "location": "St. Lawrence",
+        "description": "Behind our hotel",
         "images": [
           {
             "filename": "PXL_20260119_160814603.jpg",
@@ -452,7 +482,15 @@
               "lat": 13.074291666666667,
               "lng": -59.588547222222225
             }
-          },
+          }
+        ]
+      },
+      {
+        "dayTitle": "Day 4 - Part 2",
+        "date": "2026-01-19",
+        "location": "Barbados",
+        "description": "The beach across from our hotel",
+        "images": [
           {
             "filename": "PXL_20260119_183505598.jpg",
             "path": "/trips/barbados-2026/PXL_20260119_183505598.jpg",
@@ -538,8 +576,8 @@
       {
         "dayTitle": "Day 5",
         "date": "2026-01-20",
-        "location": "",
-        "description": "",
+        "location": "St. Lawrence",
+        "description": "The Reggae bus was a great way to get around.",
         "images": [
           {
             "filename": "PXL_20260120_180149059.jpg",
@@ -560,7 +598,15 @@
               "lat": 13.074169444444443,
               "lng": -59.588166666666666
             }
-          },
+          }
+        ]
+      },
+      {
+        "dayTitle": "Day 5 - Part 2",
+        "date": "2026-01-20",
+        "location": "Oistins",
+        "description": "",
+        "images": [
           {
             "filename": "PXL_20260120_220529925.jpg",
             "path": "/trips/barbados-2026/PXL_20260120_220529925.jpg",
@@ -616,8 +662,8 @@
       {
         "dayTitle": "Day 6",
         "date": "2026-01-21",
-        "location": "",
-        "description": "",
+        "location": "Barbados",
+        "description": "Along the boardwalk",
         "images": [
           {
             "filename": "PXL_20260121_125056477-EFFECTS.jpg",
@@ -648,7 +694,15 @@
               "lat": 13.074780555555556,
               "lng": -59.600052777777776
             }
-          },
+          }
+        ]
+      },
+      {
+        "dayTitle": "Day 6 - Part 2",
+        "date": "2026-01-21",
+        "location": "St. Lawrence",
+        "description": "",
+        "images": [
           {
             "filename": "PXL_20260121_141347878.jpg",
             "path": "/trips/barbados-2026/PXL_20260121_141347878.jpg",
@@ -774,7 +828,7 @@
       {
         "dayTitle": "Day 7",
         "date": "2026-01-22",
-        "location": "",
+        "location": "St. Lawrence",
         "description": "",
         "images": [
           {
@@ -852,7 +906,7 @@
       {
         "dayTitle": "Day 8",
         "date": "2026-01-23",
-        "location": "",
+        "location": "St. Lawrence",
         "description": "",
         "images": [
           {
@@ -984,7 +1038,15 @@
               "lat": 13.073980555555556,
               "lng": -59.58884166666667
             }
-          },
+          }
+        ]
+      },
+      {
+        "dayTitle": "Day 8 - Part 2",
+        "date": "2026-01-23",
+        "location": "Barbados",
+        "description": "",
+        "images": [
           {
             "filename": "PXL_20260123_183248434.jpg",
             "path": "/trips/barbados-2026/PXL_20260123_183248434.jpg",
