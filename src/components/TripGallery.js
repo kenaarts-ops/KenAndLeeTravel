@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -45,7 +46,7 @@ export default function TripGallery({ images }) {
             </div>
 
             {/* Swiper Lightbox Modal */}
-            {selectedPhotoIndex !== null && (
+            {selectedPhotoIndex !== null && typeof document !== 'undefined' && createPortal(
                 <div
                     style={{
                         position: 'fixed',
@@ -118,7 +119,8 @@ export default function TripGallery({ images }) {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </div>
+                </div>,
+                document.body
             )}
         </div>
     );
