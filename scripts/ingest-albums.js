@@ -144,13 +144,67 @@ async function ingestAlbums() {
             // Format title (e.g., "barbados-2026" -> "Barbados 2026")
             const title = originalFolderName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
+            // Group deduplicated images by Date
+            const daysMap = {};
+            for (const img of deduplicatedImages) {
+                if (!img.date) continue;
+                // Get local-ish date string by shifting tz offset or just using ISO date part
+                // The EXIF DateTimeOriginal is usually local time without timezone.
+                // We stored it as ISO string treating it like UTC, so split('T')[0] works.
+                const dateString = img.date.split('T')[0];
+
+                if (!daysMap[dateString]) {
+                    daysMap[dateString] = {
+                        date: dateString,
+                        images: []
+                    };
+                }
+                daysMap[dateString].images.push(img);
+            }
+
+            const dayObjects = Object.values(daysMap).sort((a, b) => a.date.localeCompare(b.date));
+
+            // Generate or merge story.json scaffolding
+            const storyPath = path.join(tripPath, 'story.json');
+            let existingStory = { days: [] };
+
+            if (fs.existsSync(storyPath)) {
+                try {
+                    existingStory = JSON.parse(fs.readFileSync(storyPath));
+                } catch (e) {
+                    console.error(`Error reading existing story.json in ${tripId}`);
+                }
+            }
+
+            const finalDays = dayObjects.map((dayObj, index) => {
+                const existingDayData = existingStory.days.find(d => d.date === dayObj.date);
+                return {
+                    dayTitle: `Day ${index + 1}`,
+                    date: dayObj.date,
+                    location: existingDayData ? existingDayData.location : "",
+                    description: existingDayData ? existingDayData.description : "",
+                    images: dayObj.images
+                };
+            });
+
+            // Write the narrative scaffold back to the trip directory so user can edit it
+            const scaffoldStory = {
+                title: title,
+                days: finalDays.map(d => ({
+                    date: d.date,
+                    location: d.location,
+                    description: d.description
+                }))
+            };
+            fs.writeFileSync(storyPath, JSON.stringify(scaffoldStory, null, 2));
+
             trips.push({
                 id: tripId,
                 title: title,
                 coverImage: deduplicatedImages.length > 0 ? deduplicatedImages[0].thumbnail : null,
                 startDate: minDate ? new Date(minDate).toISOString() : null,
                 endDate: maxDate ? new Date(maxDate).toISOString() : null,
-                images: deduplicatedImages
+                days: finalDays
             });
         }
     }

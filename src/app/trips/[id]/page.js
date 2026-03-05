@@ -23,7 +23,8 @@ export default function TripPage({ params }) {
         return <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Trip Not Found</div>;
     }
 
-    const mapLocations = trip.images
+    const mapLocations = trip.days
+        .flatMap(day => day.images)
         .filter(img => img.location)
         .map(img => ({ lat: img.location.lat, lng: img.location.lng, title: img.filename }));
 
@@ -42,7 +43,7 @@ export default function TripPage({ params }) {
                         {trip.title}
                     </h1>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-                        {trip.images.length} photos captured during this journey.
+                        {trip.days.reduce((acc, d) => acc + d.images.length, 0)} photos captured over {trip.days.length} days.
                     </p>
                 </div>
             </section>
@@ -58,7 +59,7 @@ export default function TripPage({ params }) {
 
                 <div className="animate-fade-in-up delay-2">
                     <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', marginBottom: '1.5rem', color: '#fff' }}>Gallery</h2>
-                    <TripGallery images={trip.images} />
+                    <TripGallery days={trip.days} />
                 </div>
             </section>
         </main>
