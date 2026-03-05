@@ -3,50 +3,24 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Keyboard, Zoom } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/zoom';
+
 export default function TripGallery({ images }) {
     const basePath = '/KenAndLeeTravel';
     const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(null);
 
-    // Keyboard navigation
-    useEffect(() => {
-        const handleKeyDown = (e) => {
-            if (selectedPhotoIndex === null) return;
-
-            if (e.key === 'Escape') {
-                closeModal();
-            } else if (e.key === 'ArrowRight') {
-                nextPhoto(e);
-            } else if (e.key === 'ArrowLeft') {
-                prevPhoto(e);
-            }
-        };
-
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [selectedPhotoIndex]);
-
     const openModal = (idx) => {
         setSelectedPhotoIndex(idx);
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        document.body.style.overflow = 'hidden';
     };
 
     const closeModal = () => {
         setSelectedPhotoIndex(null);
         document.body.style.overflow = 'auto';
-    };
-
-    const nextPhoto = (e) => {
-        if (e) e.stopPropagation();
-        if (selectedPhotoIndex !== null && selectedPhotoIndex < images.length - 1) {
-            setSelectedPhotoIndex(selectedPhotoIndex + 1);
-        }
-    };
-
-    const prevPhoto = (e) => {
-        if (e) e.stopPropagation();
-        if (selectedPhotoIndex !== null && selectedPhotoIndex > 0) {
-            setSelectedPhotoIndex(selectedPhotoIndex - 1);
-        }
     };
 
     return (
@@ -70,125 +44,80 @@ export default function TripGallery({ images }) {
                 ))}
             </div>
 
-            {/* Lightbox Modal */}
+            {/* Swiper Lightbox Modal */}
             {selectedPhotoIndex !== null && (
                 <div
-                    onClick={closeModal}
                     style={{
                         position: 'fixed',
                         inset: 0,
-                        backgroundColor: 'rgba(0,0,0,0.9)',
-                        zIndex: 1000,
+                        backgroundColor: 'rgba(0,0,0,0.95)',
+                        zIndex: 9999,
                         display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
+                        flexDirection: 'column'
                     }}
                 >
-                    {/* Close Button */}
-                    <button
-                        onClick={closeModal}
-                        style={{
-                            position: 'absolute',
-                            top: '20px',
-                            right: '25px',
-                            background: 'none',
-                            border: 'none',
-                            color: 'white',
-                            fontSize: '2rem',
-                            cursor: 'pointer',
-                            zIndex: 1001
-                        }}
-                        aria-label="Close"
-                    >
-                        &times;
-                    </button>
-
-                    {/* Previous Button */}
-                    {selectedPhotoIndex > 0 && (
+                    {/* Top Bar */}
+                    <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '20px', position: 'absolute', top: 0, right: 0, width: '100%', zIndex: 10000 }}>
                         <button
-                            onClick={prevPhoto}
+                            onClick={closeModal}
                             style={{
-                                position: 'absolute',
-                                left: '20px',
                                 background: 'rgba(255,255,255,0.1)',
                                 border: 'none',
                                 color: 'white',
                                 fontSize: '2rem',
-                                padding: '10px 20px',
+                                width: '50px',
+                                height: '50px',
                                 borderRadius: '50%',
                                 cursor: 'pointer',
-                                zIndex: 1001,
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
                                 backdropFilter: 'blur(4px)'
                             }}
-                            aria-label="Previous"
+                            aria-label="Close"
                         >
-                            &#10094;
+                            &times;
                         </button>
-                    )}
+                    </div>
 
-                    <div
-                        style={{ position: 'fixed', inset: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1002 }}
-                        onClick={(e) => e.stopPropagation()} // Prevent clicks on the image from closing the modal
+                    <Swiper
+                        modules={[Navigation, Keyboard, Zoom]}
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        navigation
+                        keyboard={{ enabled: true }}
+                        zoom={{ maxRatio: 3 }}
+                        initialSlide={selectedPhotoIndex}
+                        style={{ width: '100%', height: '100%' }}
                     >
-                        {images[selectedPhotoIndex].filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
-                            <video
-                                src={`${basePath}${images[selectedPhotoIndex].path}`}
-                                controls
-                                autoPlay
-                                style={{ maxWidth: '90vw', maxHeight: '90vh', objectFit: 'contain' }}
-                            />
-                        ) : (
-                            <img
-                                src={`${basePath}${images[selectedPhotoIndex].path}`}
-                                alt={images[selectedPhotoIndex].filename}
-                                style={{
-                                    maxWidth: '90vw',
-                                    maxHeight: '90vh',
-                                    objectFit: 'contain',
-                                    backgroundImage: `url(${basePath}${images[selectedPhotoIndex].thumbnail || images[selectedPhotoIndex].path})`,
-                                    backgroundSize: 'contain',
-                                    backgroundPosition: 'center',
-                                    backgroundRepeat: 'no-repeat'
-                                }}
-                            />
-                        )}
-                    </div>
-
-                    {/* Next Button */}
-                    {selectedPhotoIndex < images.length - 1 && (
-                        <button
-                            onClick={nextPhoto}
-                            style={{
-                                position: 'absolute',
-                                right: '20px',
-                                background: 'rgba(255,255,255,0.1)',
-                                border: 'none',
-                                color: 'white',
-                                fontSize: '2rem',
-                                padding: '10px 20px',
-                                borderRadius: '50%',
-                                cursor: 'pointer',
-                                zIndex: 1001,
-                                backdropFilter: 'blur(4px)'
-                            }}
-                            aria-label="Next"
-                        >
-                            &#10095;
-                        </button>
-                    )}
-
-                    {/* Counter */}
-                    <div style={{
-                        position: 'absolute',
-                        bottom: '20px',
-                        color: 'white',
-                        background: 'rgba(0,0,0,0.5)',
-                        padding: '5px 15px',
-                        borderRadius: '20px',
-                        fontSize: '0.9rem'
-                    }}>
-                        {selectedPhotoIndex + 1} / {images.length}
-                    </div>
+                        {images.map((img, idx) => (
+                            <SwiperSlide key={idx} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <div className="swiper-zoom-container" style={{ width: '100%', height: '100%', padding: '20px', boxSizing: 'border-box' }}>
+                                    {img.filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
+                                        <video
+                                            src={`${basePath}${img.path}`}
+                                            controls
+                                            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+                                        />
+                                    ) : (
+                                        <img
+                                            src={`${basePath}${img.path}`}
+                                            alt={img.filename}
+                                            style={{
+                                                maxWidth: '100%',
+                                                maxHeight: '100%',
+                                                objectFit: 'contain',
+                                                backgroundImage: `url('${basePath}${img.thumbnail || img.path}')`,
+                                                backgroundSize: 'contain',
+                                                backgroundPosition: 'center',
+                                                backgroundRepeat: 'no-repeat'
+                                            }}
+                                        />
+                                    )}
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             )}
         </div>
