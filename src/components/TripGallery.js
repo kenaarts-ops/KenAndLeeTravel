@@ -93,7 +93,7 @@ export default function TripGallery({ images }) {
                     >
                         {images.map((img, idx) => (
                             <SwiperSlide key={idx} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-                                <div className="swiper-zoom-container" style={{ width: '100%', height: '100%', padding: '20px', boxSizing: 'border-box' }}>
+                                <div className="swiper-zoom-container" style={{ width: '100%', height: '100%', padding: '20px', boxSizing: 'border-box', WebkitTapHighlightColor: 'transparent', userSelect: 'none' }}>
                                     {img.filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
                                         <video
                                             src={`${basePath}${img.path}`}
