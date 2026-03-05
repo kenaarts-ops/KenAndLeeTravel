@@ -88,10 +88,10 @@ export default function TripGallery({ images }) {
                         keyboard={{ enabled: true }}
                         zoom={{ maxRatio: 3 }}
                         initialSlide={selectedPhotoIndex}
-                        style={{ width: '100%', height: '100%' }}
+                        style={{ width: '100%', height: '100vh' }}
                     >
                         {images.map((img, idx) => (
-                            <SwiperSlide key={idx} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <SwiperSlide key={idx} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                                 <div className="swiper-zoom-container" style={{ width: '100%', height: '100%', padding: '20px', boxSizing: 'border-box' }}>
                                     {img.filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
                                         <video
