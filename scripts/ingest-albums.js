@@ -330,6 +330,7 @@ async function ingestAlbums() {
 
                 let finalDescription = "";
                 let finalLocation = sec.location;
+                let finalAiStory = "";
 
                 if (existingDayDataIndex !== -1) {
                     consumedStoryIndexes.add(existingDayDataIndex);
@@ -337,6 +338,9 @@ async function ingestAlbums() {
                     finalDescription = existingStory.days[existingDayDataIndex].description || "";
                     if (existingStory.days[existingDayDataIndex].location !== undefined && existingStory.days[existingDayDataIndex].location !== "") {
                         finalLocation = existingStory.days[existingDayDataIndex].location;
+                    }
+                    if (existingStory.days[existingDayDataIndex].aiStory) {
+                        finalAiStory = existingStory.days[existingDayDataIndex].aiStory;
                     }
                 }
 
@@ -346,6 +350,7 @@ async function ingestAlbums() {
                     date: sec.date,
                     location: finalLocation,
                     description: finalDescription,
+                    aiStory: finalAiStory,
                     images: sec.images
                 };
             });
@@ -355,9 +360,11 @@ async function ingestAlbums() {
                 title: title,
                 days: finalDays.map(d => ({
                     id: d.id,
+                    dayTitle: d.dayTitle,
                     date: d.date,
                     location: d.location,
-                    description: d.description
+                    description: d.description,
+                    aiStory: d.aiStory
                 }))
             };
             fs.writeFileSync(storyPath, JSON.stringify(scaffoldStory, null, 2));

@@ -56,6 +56,33 @@ export default function TripGallery({ days }) {
                                 Awaiting narrative...
                             </p>
                         )}
+
+                        {day.aiStory && (
+                            <div style={{
+                                marginTop: '1.5rem',
+                                marginBottom: '2rem',
+                                padding: '1.25rem 1.5rem',
+                                background: 'linear-gradient(135deg, rgba(88, 28, 135, 0.15) 0%, rgba(30, 58, 138, 0.15) 100%)',
+                                borderRadius: '0 12px 12px 0',
+                                display: 'flex',
+                                gap: '1rem',
+                                alignItems: 'flex-start',
+                                border: '1px solid rgba(139, 92, 246, 0.2)',
+                                borderLeft: '4px solid #8b5cf6',
+                                maxWidth: '800px'
+                            }}>
+                                <svg style={{ flexShrink: 0, marginTop: '4px', color: '#a78bfa' }} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" /></svg>
+                                <p style={{
+                                    color: 'var(--text-secondary)',
+                                    fontSize: '1rem',
+                                    lineHeight: '1.7',
+                                    fontStyle: 'italic',
+                                    margin: 0
+                                }}>
+                                    {day.aiStory}
+                                </p>
+                            </div>
+                        )}
                     </div>
 
                     {/* Gallery Grid for this Day */}
@@ -64,12 +91,12 @@ export default function TripGallery({ days }) {
                             <div
                                 key={pIdx}
                                 onClick={() => openModal(dIdx, pIdx)}
-                                style={{ position: 'relative', aspectRatio: '1/1', borderRadius: '16px', overflow: 'hidden', cursor: 'pointer', transition: 'transform 0.2s' }}
+                                style={{ position: 'relative', aspectRatio: '1/1', borderRadius: '16px', overflow: 'hidden', cursor: 'pointer', transition: 'transform 0.2s', backgroundColor: '#1e293b' }}
                                 onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
                                 onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                             >
                                 {img.filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
-                                    <video src={`${basePath}${img.path}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} muted loop playsInline />
+                                    <video src={`${basePath}${img.path}`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} muted loop playsInline />
                                 ) : (
                                     <Image
                                         src={`${basePath}${img.thumbnail || img.path}`}
@@ -77,7 +104,7 @@ export default function TripGallery({ days }) {
                                         fill
                                         unoptimized={true}
                                         priority={dIdx === 0 && pIdx < 12} // Load initial day immediately
-                                        style={{ objectFit: 'cover', backgroundColor: '#1e293b' }}
+                                        style={{ objectFit: 'contain' }}
                                     />
                                 )}
                             </div>
@@ -134,12 +161,18 @@ export default function TripGallery({ days }) {
                         zoom={{ maxRatio: 3 }}
                         initialSlide={activeLightbox.photoIndex}
                         style={{ width: '100%', height: '100vh' }}
+                        onSlideChange={() => {
+                            // Pause any playing videos when swiping
+                            const videos = document.querySelectorAll('.lightbox-video');
+                            videos.forEach(v => v.pause());
+                        }}
                     >
                         {activeDay?.images.map((img, idx) => (
                             <SwiperSlide key={idx} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                                 <div className="swiper-zoom-container" style={{ width: '100%', height: '100%', padding: '20px', boxSizing: 'border-box', WebkitTapHighlightColor: 'transparent', userSelect: 'none' }}>
                                     {img.filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
                                         <video
+                                            className="lightbox-video"
                                             src={`${basePath}${img.path}`}
                                             controls
                                             style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}

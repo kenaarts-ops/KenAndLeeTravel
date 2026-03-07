@@ -3,105 +3,139 @@
   "days": [
     {
       "id": "PXL_20260116_201636212-EDIT.jpg",
+      "dayTitle": "Day 1",
       "date": "2026-01-16",
       "location": "",
-      "description": "Arriving at Grantley Adams Internation Airport near Bridgetown"
+      "description": "Arriving at Grantley Adams Internation Airport near Bridgetown",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260117_170424440.jpg",
+      "dayTitle": "Day 2",
       "date": "2026-01-17",
       "location": "Bridgetown",
-      "description": "An interesting little pet market (I hope)."
+      "description": "An interesting little pet market (I hope).",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260118_135254484~2.jpg",
+      "dayTitle": "Day 3",
       "date": "2026-01-18",
       "location": "St. Lawrence Gap",
-      "description": ""
+      "description": "",
+      "aiStory": ""
     },
     {
       "id": "original_bda8cb34-e2cf-4c20-adb0-8fc1e99e79dc_PXL_20260118_144114435~2.jpg",
+      "dayTitle": "Day 3 - Part 2",
       "date": "2026-01-18",
       "location": "Oistins Seafood Market",
-      "description": "Beach with BBQs, 100's of vendors, and a lot of boat traffic"
+      "description": "Beach with BBQs, 100's of vendors, and a lot of boat traffic",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260118_161139901~2.jpg",
+      "dayTitle": "Day 3 - Part 3",
       "date": "2026-01-18",
       "location": "Bridgetown",
-      "description": "A kind of unique intersection. Two one way streets arriving, and two different one way streets departing"
+      "description": "A kind of unique intersection. Two one way streets arriving, and two different one way streets departing",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260118_173109230.jpg",
+      "dayTitle": "Day 3 - Part 4",
       "date": "2026-01-18",
       "location": "Animal Flower Cave",
-      "description": "Views of the Atlantic Ocean to the east, and the Caribbean to the west"
+      "description": "Views of the Atlantic Ocean to the east, and the Caribbean to the west",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260118_181240593.mp4",
+      "dayTitle": "Day 3 - Part 5",
       "date": "2026-01-18",
       "location": "Cherry Tree Hill",
-      "description": "... and the steam railway at St. Nicholas Abbey"
+      "description": "... and the steam railway at St. Nicholas Abbey",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260118_195905306.jpg",
+      "dayTitle": "Day 3 - Part 6",
       "date": "2026-01-18",
       "location": "St. Lawrence Gap",
-      "description": "It's amazing how we find chickens just about everywhere we travel"
+      "description": "It's amazing how we find chickens just about everywhere we travel",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260119_003558504.NIGHT.jpg",
+      "dayTitle": "Day 4",
       "date": "2026-01-19",
       "location": "St. Lawrence Gap",
-      "description": "Behind our hotel"
+      "description": "Behind our hotel",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260119_183505598.jpg",
+      "dayTitle": "Day 4 - Part 2",
       "date": "2026-01-19",
       "location": "Barbados",
-      "description": "The beach across from our hotel"
+      "description": "The beach across from our hotel",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260120_180149059.jpg",
+      "dayTitle": "Day 5",
       "date": "2026-01-20",
       "location": "St. Lawrence Gap",
-      "description": "The Reggae bus was a great way to get around and quite the experience."
+      "description": "The Reggae bus was a great way to get around and quite the experience.",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260120_220529925.jpg",
+      "dayTitle": "Day 5 - Part 2",
       "date": "2026-01-20",
       "location": "Oistins Seafood Market",
-      "description": ""
+      "description": "",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260121_125056477-EFFECTS.jpg",
+      "dayTitle": "Day 6",
       "date": "2026-01-21",
       "location": "Barbados",
-      "description": "Along the boardwalk"
+      "description": "Along the boardwalk",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260121_141347878.jpg",
+      "dayTitle": "Day 6 - Part 2",
       "date": "2026-01-21",
       "location": "St. Lawrence Gap",
-      "description": " A little time in the pool.  There is a mile long entertainment zone in the Gap"
+      "description": " A little time in the pool.  There is a mile long entertainment zone in the Gap",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260122_124811767~2.jpg",
+      "dayTitle": "Day 7",
       "date": "2026-01-22",
       "location": "St. Lawrence Gap",
-      "description": "Our hotel, more of the boardwalk, and dining at Crystal Beach."
+      "description": "Our hotel, more of the boardwalk, and dining at Crystal Beach.",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260123_111156023~2.jpg",
+      "dayTitle": "Day 8",
       "date": "2026-01-23",
       "location": "St. Lawrence Gap",
-      "description": "Last visit to the beach."
+      "description": "Last visit to the beach.",
+      "aiStory": ""
     },
     {
       "id": "PXL_20260123_183248434.jpg",
+      "dayTitle": "Day 8 - Part 2",
       "date": "2026-01-23",
       "location": "Barbados",
-      "description": "Time to go home"
+      "description": "Time to go home",
+      "aiStory": ""
     }
   ]
 }
