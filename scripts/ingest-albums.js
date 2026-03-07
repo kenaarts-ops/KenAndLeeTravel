@@ -330,7 +330,7 @@ async function ingestAlbums() {
 
                 let finalDescription = "";
                 let finalLocation = sec.location;
-                let finalAiStory = "";
+                let finalAiStory = null;
 
                 if (existingDayDataIndex !== -1) {
                     consumedStoryIndexes.add(existingDayDataIndex);

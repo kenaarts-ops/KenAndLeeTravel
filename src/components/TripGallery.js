@@ -72,15 +72,44 @@ export default function TripGallery({ days }) {
                                 maxWidth: '800px'
                             }}>
                                 <svg style={{ flexShrink: 0, marginTop: '4px', color: '#a78bfa' }} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" /></svg>
-                                <p style={{
-                                    color: 'var(--text-secondary)',
-                                    fontSize: '1rem',
-                                    lineHeight: '1.7',
-                                    fontStyle: 'italic',
-                                    margin: 0
-                                }}>
-                                    {day.aiStory}
-                                </p>
+                                <div style={{ width: '100%' }}>
+                                    {typeof day.aiStory === 'string' ? (
+                                        <p style={{ color: 'var(--text)', fontSize: '1rem', lineHeight: '1.7', fontStyle: 'italic', margin: 0 }}>
+                                            {day.aiStory}
+                                        </p>
+                                    ) : (
+                                        <>
+                                            {day.aiStory.blog_content && (
+                                                <div style={{ marginBottom: '0.5rem' }}>
+                                                    {day.aiStory.blog_content.category && (
+                                                        <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px', color: '#a78bfa', fontWeight: 'bold', display: 'block', marginBottom: '0.4rem' }}>
+                                                            {day.aiStory.blog_content.category}
+                                                        </span>
+                                                    )}
+                                                    {day.aiStory.blog_content.title && (
+                                                        <h4 style={{ margin: '0 0 0.5rem 0', color: '#fff', fontSize: '1.25rem', fontFamily: 'var(--font-serif)' }}>
+                                                            {day.aiStory.blog_content.title}
+                                                        </h4>
+                                                    )}
+                                                    {day.aiStory.blog_content.description && (
+                                                        <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: '1.7', fontStyle: 'italic', margin: 0 }}>
+                                                            {day.aiStory.blog_content.description}
+                                                        </p>
+                                                    )}
+                                                </div>
+                                            )}
+                                            {day.aiStory.metadata?.keywords && (
+                                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '1rem' }}>
+                                                    {day.aiStory.metadata.keywords.map((kw, idx) => (
+                                                        <span key={idx} style={{ fontSize: '0.75rem', background: 'rgba(139, 92, 246, 0.15)', color: '#d8b4fe', padding: '4px 10px', borderRadius: '12px', whiteSpace: 'nowrap' }}>
+                                                            #{kw}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </>
+                                    )}
+                                </div>
                             </div>
                         )}
                     </div>

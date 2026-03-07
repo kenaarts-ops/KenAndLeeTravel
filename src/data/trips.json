@@ -12,7 +12,7 @@
         "date": "2026-01-16",
         "location": "",
         "description": "Arriving at Grantley Adams Internation Airport near Bridgetown",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260116_201636212-EDIT.jpg",
@@ -29,7 +29,7 @@
         "date": "2026-01-17",
         "location": "Bridgetown",
         "description": "An interesting little pet market (I hope).",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260117_170424440.jpg",
@@ -49,7 +49,7 @@
         "date": "2026-01-18",
         "location": "St. Lawrence Gap",
         "description": "",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260118_135254484~2.jpg",
@@ -79,7 +79,7 @@
         "date": "2026-01-18",
         "location": "Oistins Seafood Market",
         "description": "Beach with BBQs, 100's of vendors, and a lot of boat traffic",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "original_bda8cb34-e2cf-4c20-adb0-8fc1e99e79dc_PXL_20260118_144114435~2.jpg",
@@ -209,7 +209,7 @@
         "date": "2026-01-18",
         "location": "Bridgetown",
         "description": "A kind of unique intersection. Two one way streets arriving, and two different one way streets departing",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260118_161139901~2.jpg",
@@ -229,7 +229,7 @@
         "date": "2026-01-18",
         "location": "Animal Flower Cave",
         "description": "Views of the Atlantic Ocean to the east, and the Caribbean to the west",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260118_173109230.jpg",
@@ -379,7 +379,7 @@
         "date": "2026-01-18",
         "location": "Cherry Tree Hill",
         "description": "... and the steam railway at St. Nicholas Abbey",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260118_181240593.mp4",
@@ -459,7 +459,7 @@
         "date": "2026-01-18",
         "location": "St. Lawrence Gap",
         "description": "It's amazing how we find chickens just about everywhere we travel",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260118_195905306.jpg",
@@ -549,7 +549,7 @@
         "date": "2026-01-19",
         "location": "St. Lawrence Gap",
         "description": "Behind our hotel",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260119_003558504.NIGHT.jpg",
@@ -589,7 +589,7 @@
         "date": "2026-01-19",
         "location": "Barbados",
         "description": "The beach across from our hotel",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260119_183505598.jpg",
@@ -679,7 +679,7 @@
         "date": "2026-01-20",
         "location": "St. Lawrence Gap",
         "description": "The Reggae bus was a great way to get around and quite the experience.",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260120_180149059.jpg",
@@ -709,7 +709,25 @@
         "date": "2026-01-20",
         "location": "Oistins Seafood Market",
         "description": "",
-        "aiStory": "",
+        "aiStory": {
+          "blog_content": {
+            "title": "The Barbados Beat on Wheels",
+            "slug": "reggae-bus-barbados",
+            "category": "Local Experience",
+            "description": "No trip to Barbados is complete without a ride on the iconic reggae busthe nickname given to the islands privately owned yellow minibuses and white ZR vans. For a flat fare of .50 BDS, you arent just paying for transportation; youre paying for a front-row seat to Bajan culture. These buses are famous for their vibrating sound systems blasting the latest dancehall hits, neon interior lights, and a spirited driving style that makes every journey feel like a high-speed adventure. Whether youre squeezed in among locals or gripping the seat as the driver maneuvers through narrow coastal gaps, the experience is a chaotic, loud, and brilliantly authentic way to see the island. Just look for the yellow paint with the blue stripe, listen for the bass, and wave your hand to hop on!"
+          },
+          "metadata": {
+            "keywords": [
+              "Barbados",
+              "Reggae Bus",
+              "ZR Vans",
+              "Bajan Culture",
+              "Travel Tips"
+            ],
+            "location": "Barbados",
+            "currency": "BDS"
+          }
+        },
         "images": [
           {
             "filename": "PXL_20260120_220529925.jpg",
@@ -769,7 +787,7 @@
         "date": "2026-01-21",
         "location": "Barbados",
         "description": "Along the boardwalk",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260121_125056477-EFFECTS.jpg",
@@ -809,7 +827,7 @@
         "date": "2026-01-21",
         "location": "St. Lawrence Gap",
         "description": " A little time in the pool.  There is a mile long entertainment zone in the Gap",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260121_141347878.jpg",
@@ -939,7 +957,7 @@
         "date": "2026-01-22",
         "location": "St. Lawrence Gap",
         "description": "Our hotel, more of the boardwalk, and dining at Crystal Beach.",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260122_124811767~2.jpg",
@@ -1019,7 +1037,7 @@
         "date": "2026-01-23",
         "location": "St. Lawrence Gap",
         "description": "Last visit to the beach.",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260123_111156023~2.jpg",
@@ -1129,7 +1147,7 @@
         "date": "2026-01-23",
         "location": "Barbados",
         "description": "Time to go home",
-        "aiStory": "",
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260123_183248434.jpg",
