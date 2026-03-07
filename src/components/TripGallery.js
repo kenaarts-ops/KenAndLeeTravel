@@ -118,6 +118,7 @@ export default function TripGallery({ days }) {
                     <div className="trip-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))' }}>
                         {day.images.map((img, pIdx) => (
                             <div
+                                id={`photo-${dIdx}-${pIdx}`}
                                 key={pIdx}
                                 onClick={() => openModal(dIdx, pIdx)}
                                 style={{ position: 'relative', aspectRatio: '1/1', borderRadius: '16px', overflow: 'hidden', cursor: 'pointer', transition: 'transform 0.2s', backgroundColor: '#1e293b' }}

@@ -25,8 +25,18 @@ export default function MapClient({ locations }) {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {locations.map((loc, idx) => (
-                    <Marker key={idx} position={[loc.lat, loc.lng]}>
-                        <Popup>{loc.title || 'Photo Location'}</Popup>
+                    <Marker
+                        key={idx}
+                        position={[loc.lat, loc.lng]}
+                        eventHandlers={{
+                            click: () => {
+                                const el = document.getElementById(`photo-${loc.dIdx}-${loc.pIdx}`);
+                                if (el) {
+                                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }
+                            }
+                        }}
+                    >
                     </Marker>
                 ))}
             </MapContainer>

@@ -24,9 +24,15 @@ export default function TripPage({ params }) {
     }
 
     const mapLocations = trip.days
-        .flatMap(day => day.images)
+        .flatMap((day, dIdx) => day.images.map((img, pIdx) => ({ ...img, dIdx, pIdx })))
         .filter(img => img.location)
-        .map(img => ({ lat: img.location.lat, lng: img.location.lng, title: img.filename }));
+        .map(img => ({
+            lat: img.location.lat,
+            lng: img.location.lng,
+            title: img.filename,
+            dIdx: img.dIdx,
+            pIdx: img.pIdx
+        }));
 
     return (
         <main style={{ minHeight: '100vh', paddingBottom: '5rem' }}>
