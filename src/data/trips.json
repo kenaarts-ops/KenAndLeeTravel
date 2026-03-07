@@ -222,8 +222,8 @@
         "id": "PXL_20260118_173109230.jpg",
         "dayTitle": "Day 3 - Part 4",
         "date": "2026-01-18",
-        "location": "Greenidge",
-        "description": "",
+        "location": "Animal Flower Cave",
+        "description": "Views of the Atlantic Ocean to the east, and the Caribbean to the west",
         "images": [
           {
             "filename": "PXL_20260118_173109230.jpg",
@@ -371,8 +371,8 @@
         "id": "PXL_20260118_181240593.mp4",
         "dayTitle": "Day 3 - Part 5",
         "date": "2026-01-18",
-        "location": "Morgan Lewis",
-        "description": "... and the steam railway at St, Nic",
+        "location": "Cherry Tree Hill",
+        "description": "... and the steam railway at St. Nicholas Abbey",
         "images": [
           {
             "filename": "PXL_20260118_181240593.mp4",
@@ -668,7 +668,7 @@
         "dayTitle": "Day 5",
         "date": "2026-01-20",
         "location": "St. Lawrence Gap",
-        "description": "The Reggae bus was a great way to get around.",
+        "description": "The Reggae bus was a great way to get around and quite the experience.",
         "images": [
           {
             "filename": "PXL_20260120_180149059.jpg",
@@ -795,7 +795,7 @@
         "dayTitle": "Day 6 - Part 2",
         "date": "2026-01-21",
         "location": "St. Lawrence Gap",
-        "description": "",
+        "description": " A little time in the pool.  There is a mile long entertainment zone in the Gap",
         "images": [
           {
             "filename": "PXL_20260121_141347878.jpg",
@@ -924,7 +924,7 @@
         "dayTitle": "Day 7",
         "date": "2026-01-22",
         "location": "St. Lawrence Gap",
-        "description": "",
+        "description": "Our hotel, more of the boardwalk, and dining at Crystal Beach.",
         "images": [
           {
             "filename": "PXL_20260122_124811767~2.jpg",
@@ -1003,7 +1003,7 @@
         "dayTitle": "Day 8",
         "date": "2026-01-23",
         "location": "St. Lawrence Gap",
-        "description": "",
+        "description": "Last visit to the beach.",
         "images": [
           {
             "filename": "PXL_20260123_111156023~2.jpg",
@@ -1026,30 +1026,10 @@
             }
           },
           {
-            "filename": "PXL_20260123_120842651.jpg",
-            "path": "/trips/barbados-2026/PXL_20260123_120842651.jpg",
-            "thumbnail": "/trips/barbados-2026/PXL_20260123_120842651.jpg.thumb.jpg",
-            "date": "2026-01-23T12:08:42",
-            "location": {
-              "lat": 13.074158333333333,
-              "lng": -59.588077777777784
-            }
-          },
-          {
             "filename": "PXL_20260123_120902684.jpg",
             "path": "/trips/barbados-2026/PXL_20260123_120902684.jpg",
             "thumbnail": "/trips/barbados-2026/PXL_20260123_120902684.jpg.thumb.jpg",
             "date": "2026-01-23T12:09:02",
-            "location": {
-              "lat": 13.074158333333333,
-              "lng": -59.588077777777784
-            }
-          },
-          {
-            "filename": "PXL_20260123_120915712.jpg",
-            "path": "/trips/barbados-2026/PXL_20260123_120915712.jpg",
-            "thumbnail": "/trips/barbados-2026/PXL_20260123_120915712.jpg.thumb.jpg",
-            "date": "2026-01-23T12:09:15",
             "location": {
               "lat": 13.074158333333333,
               "lng": -59.588077777777784
@@ -1073,16 +1053,6 @@
             "location": {
               "lat": 13.073855555555555,
               "lng": -59.587941666666666
-            }
-          },
-          {
-            "filename": "PXL_20260123_121102043.jpg",
-            "path": "/trips/barbados-2026/PXL_20260123_121102043.jpg",
-            "thumbnail": "/trips/barbados-2026/PXL_20260123_121102043.jpg.thumb.jpg",
-            "date": "2026-01-23T12:11:02",
-            "location": {
-              "lat": 13.073505555555556,
-              "lng": -59.58811666666667
             }
           },
           {
@@ -1142,7 +1112,7 @@
         "dayTitle": "Day 8 - Part 2",
         "date": "2026-01-23",
         "location": "Barbados",
-        "description": "",
+        "description": "Time to go home",
         "images": [
           {
             "filename": "PXL_20260123_183248434.jpg",
