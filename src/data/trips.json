@@ -378,7 +378,7 @@
         "dayTitle": "Day 3 - Part 5",
         "date": "2026-01-18",
         "location": "Cherry Tree Hill",
-        "description": "... and the steam railway at St. Nicholas Abbey",
+        "description": "... and the steam railway at St. Nicholas Abbey. The swivel to rotate the train engine for the return trip was very cool. One person manually pushes the engine to turn it around.",
         "aiStory": null,
         "images": [
           {
@@ -679,7 +679,25 @@
         "date": "2026-01-20",
         "location": "St. Lawrence Gap",
         "description": "The Reggae bus was a great way to get around and quite the experience.",
-        "aiStory": null,
+        "aiStory": {
+          "blog_content": {
+            "title": "The Barbados Beat on Wheels",
+            "slug": "reggae-bus-barbados",
+            "category": "Local Experience",
+            "description": "No trip to Barbados is complete without a ride on the iconic reggae busthe nickname given to the islands privately owned yellow minibuses and white ZR vans. For a flat fare of .50 BDS, you arent just paying for transportation; youre paying for a front-row seat to Bajan culture. These buses are famous for their vibrating sound systems blasting the latest dancehall hits, neon interior lights, and a spirited driving style that makes every journey feel like a high-speed adventure. Whether youre squeezed in among locals or gripping the seat as the driver maneuvers through narrow coastal gaps, the experience is a chaotic, loud, and brilliantly authentic way to see the island. Just look for the yellow paint with the blue stripe, listen for the bass, and wave your hand to hop on!"
+          },
+          "metadata": {
+            "keywords": [
+              "Barbados",
+              "Reggae Bus",
+              "ZR Vans",
+              "Bajan Culture",
+              "Travel Tips"
+            ],
+            "location": "Barbados",
+            "currency": "BDS"
+          }
+        },
         "images": [
           {
             "filename": "PXL_20260120_180149059.jpg",
@@ -709,25 +727,7 @@
         "date": "2026-01-20",
         "location": "Oistins Seafood Market",
         "description": "",
-        "aiStory": {
-          "blog_content": {
-            "title": "The Barbados Beat on Wheels",
-            "slug": "reggae-bus-barbados",
-            "category": "Local Experience",
-            "description": "No trip to Barbados is complete without a ride on the iconic reggae busthe nickname given to the islands privately owned yellow minibuses and white ZR vans. For a flat fare of .50 BDS, you arent just paying for transportation; youre paying for a front-row seat to Bajan culture. These buses are famous for their vibrating sound systems blasting the latest dancehall hits, neon interior lights, and a spirited driving style that makes every journey feel like a high-speed adventure. Whether youre squeezed in among locals or gripping the seat as the driver maneuvers through narrow coastal gaps, the experience is a chaotic, loud, and brilliantly authentic way to see the island. Just look for the yellow paint with the blue stripe, listen for the bass, and wave your hand to hop on!"
-          },
-          "metadata": {
-            "keywords": [
-              "Barbados",
-              "Reggae Bus",
-              "ZR Vans",
-              "Bajan Culture",
-              "Travel Tips"
-            ],
-            "location": "Barbados",
-            "currency": "BDS"
-          }
-        },
+        "aiStory": null,
         "images": [
           {
             "filename": "PXL_20260120_220529925.jpg",

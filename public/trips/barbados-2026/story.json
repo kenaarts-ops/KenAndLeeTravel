@@ -54,7 +54,7 @@
       "dayTitle": "Day 3 - Part 5",
       "date": "2026-01-18",
       "location": "Cherry Tree Hill",
-      "description": "... and the steam railway at St. Nicholas Abbey",
+      "description": "... and the steam railway at St. Nicholas Abbey. The swivel to rotate the train engine for the return trip was very cool. One person manually pushes the engine to turn it around.",
       "aiStory": null
     },
     {
@@ -87,14 +87,6 @@
       "date": "2026-01-20",
       "location": "St. Lawrence Gap",
       "description": "The Reggae bus was a great way to get around and quite the experience.",
-      "aiStory": null
-    },
-    {
-      "id": "PXL_20260120_220529925.jpg",
-      "dayTitle": "Day 5 - Part 2",
-      "date": "2026-01-20",
-      "location": "Oistins Seafood Market",
-      "description": "",
       "aiStory": {
         "blog_content": {
           "title": "The Barbados Beat on Wheels",
@@ -114,6 +106,14 @@
           "currency": "BDS"
         }
       }
+    },
+    {
+      "id": "PXL_20260120_220529925.jpg",
+      "dayTitle": "Day 5 - Part 2",
+      "date": "2026-01-20",
+      "location": "Oistins Seafood Market",
+      "description": "",
+      "aiStory": null
     },
     {
       "id": "PXL_20260121_125056477-EFFECTS.jpg",

@@ -125,7 +125,12 @@ export default function TripGallery({ days }) {
                                 onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                             >
                                 {img.filename.match(/\.(mp4|mov|webm|avi)$/i) ? (
-                                    <video src={`${basePath}${img.path}`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} muted loop playsInline />
+                                    <>
+                                        <video src={`${basePath}${img.path}`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} muted loop playsInline />
+                                        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'rgba(0,0,0,0.5)', borderRadius: '50%', width: '48px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(4px)', pointerEvents: 'none', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }}>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '4px' }}><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                        </div>
+                                    </>
                                 ) : (
                                     <Image
                                         src={`${basePath}${img.thumbnail || img.path}`}
