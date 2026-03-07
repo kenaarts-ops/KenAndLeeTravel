@@ -68,6 +68,13 @@ async function ingestAlbums() {
                     location: null
                 };
 
+                let metaDateStr = null;
+                const match = file.match(/(?:PXL_)?(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})/i);
+                if (match) {
+                    const [_, year, month, day, hour, min, sec] = match;
+                    metaDateStr = `${year}-${month}-${day}T${hour}:${min}:${sec}`;
+                }
+
                 if (isImage) {
                     const thumbFilename = file + '.thumb.jpg';
                     const thumbPath = path.join(tripPath, thumbFilename);
@@ -91,11 +98,15 @@ async function ingestAlbums() {
                         const parser = ExifParser.create(buffer);
                         const result = parser.parse();
 
-                        if (result.tags.DateTimeOriginal) {
+                        // Prefer the clean filename timestamp for exact alignment with videos
+                        if (metaDateStr) {
+                            meta.date = metaDateStr;
+                            const d = new Date(metaDateStr).getTime();
+                            if (!minDate || d < minDate) minDate = d;
+                            if (!maxDate || d > maxDate) maxDate = d;
+                        } else if (result.tags.DateTimeOriginal) {
                             const imgDate = new Date(result.tags.DateTimeOriginal * 1000);
                             meta.date = imgDate.toISOString();
-
-                            // Track min max date
                             const d = imgDate.getTime();
                             if (!minDate || d < minDate) minDate = d;
                             if (!maxDate || d > maxDate) maxDate = d;
@@ -110,7 +121,28 @@ async function ingestAlbums() {
                     } catch (err) {
                         console.log(`Could not parse EXIF for ${file}, may not have standard EXIF data.`);
                     }
+                } else {
+                    // Video files
+                    if (metaDateStr) {
+                        meta.date = metaDateStr;
+                        const d = new Date(metaDateStr).getTime();
+                        if (!minDate || d < minDate) minDate = d;
+                        if (!maxDate || d > maxDate) maxDate = d;
+                    } else {
+                        try {
+                            const stats = fs.statSync(filePath);
+                            if (stats.birthtime) {
+                                meta.date = stats.birthtime.toISOString();
+                                const d = stats.birthtime.getTime();
+                                if (!minDate || d < minDate) minDate = d;
+                                if (!maxDate || d > maxDate) maxDate = d;
+                            }
+                        } catch (e) {
+                            console.log(`Could not get stats for ${file}`);
+                        }
+                    }
                 }
+
                 tripImages.push(meta);
             }
 
@@ -180,16 +212,40 @@ async function ingestAlbums() {
             let tripDayIndex = 0;
             let activityIndex = 1;
 
-            for (const img of deduplicatedImages) {
+            for (let i = 0; i < deduplicatedImages.length; i++) {
+                const img = deduplicatedImages[i];
                 if (!img.date) continue;
                 const dateString = img.date.split('T')[0];
                 let locString = "";
+
+                // If no location (e.g. video), interpolate from the closest neighbor on the same day
+                if (!img.location) {
+                    let closestLoc = null;
+                    let minTimeDiff = Infinity;
+                    const imgTime = new Date(img.date).getTime();
+
+                    // Scan surrounding images
+                    for (let j = 0; j < deduplicatedImages.length; j++) {
+                        const neighbor = deduplicatedImages[j];
+                        if (neighbor.date && neighbor.date.split('T')[0] === dateString && neighbor.location) {
+                            const neighborTime = new Date(neighbor.date).getTime();
+                            const diff = Math.abs(neighborTime - imgTime);
+                            if (diff < minTimeDiff) {
+                                minTimeDiff = diff;
+                                closestLoc = neighbor.location;
+                            }
+                        }
+                    }
+                    if (closestLoc) {
+                        img.location = closestLoc;
+                    }
+                }
 
                 if (img.location) {
                     locString = await getLocationString(img.location.lat, img.location.lng);
                 }
 
-                // If locString is empty, inherit from previous image in the same day to avoid splitting just because of missing GPS
+                // If locString is STILL empty after interpolation, inherit from previous section directly
                 if (!locString && currentSection && currentSection.date === dateString) {
                     locString = currentSection.location;
                 }
@@ -230,29 +286,65 @@ async function ingestAlbums() {
                 }
             }
 
-            // Map sections to final output, attempting to preserve user descriptions if they match date & location (or just date for the first item)
+            // Map sections to final output
             // We use a consumed index to ensure we don't duplicate existing stories
             const consumedStoryIndexes = new Set();
 
             const finalDays = sections.map((sec, index) => {
-                // Try to find an existing story entry that matches this date AND location
-                let existingDayDataIndex = existingStory.days.findIndex((d, i) => d.date === sec.date && d.location === sec.location && !consumedStoryIndexes.has(i));
+                const sectionId = sec.images.length > 0 ? sec.images[0].filename : sec.date;
+                let existingDayDataIndex = -1;
 
-                // If not found, try to find an existing story entry that just matches the date (for backward compatibility before locations existed)
+                // 1. Try to find an existing story entry by strict ID match
+                existingDayDataIndex = existingStory.days.findIndex((d, i) => d.id === sectionId && !consumedStoryIndexes.has(i));
+
+                // 2. If no ID, try to find an existing story entry that matches date & location (for backward compatibility)
+                if (existingDayDataIndex === -1) {
+                    existingDayDataIndex = existingStory.days.findIndex((d, i) => d.date === sec.date && d.location === sec.location && !consumedStoryIndexes.has(i));
+                }
+
+                // 2b. If still no match, try to match by date and sequential occurrence (this allows locations to be manually overridden without dropping the entry)
+                if (existingDayDataIndex === -1) {
+                    // Find which sequential occurrence of this date the current section is
+                    let currentSectionDateIndex = 0;
+                    for (let j = 0; j < index; j++) {
+                        if (sections[j].date === sec.date) currentSectionDateIndex++;
+                    }
+
+                    // Find the corresponding sequential occurrence in the existing story
+                    let existingDateIndexCount = 0;
+                    for (let j = 0; j < existingStory.days.length; j++) {
+                        if (existingStory.days[j].date === sec.date) {
+                            if (existingDateIndexCount === currentSectionDateIndex && !consumedStoryIndexes.has(j)) {
+                                existingDayDataIndex = j;
+                                break;
+                            }
+                            existingDateIndexCount++;
+                        }
+                    }
+                }
+
+                // 3. If still no match, fallback to the next available sequentially matching date
                 if (existingDayDataIndex === -1) {
                     existingDayDataIndex = existingStory.days.findIndex((d, i) => d.date === sec.date && !consumedStoryIndexes.has(i));
                 }
 
                 let finalDescription = "";
+                let finalLocation = sec.location;
+
                 if (existingDayDataIndex !== -1) {
                     consumedStoryIndexes.add(existingDayDataIndex);
-                    finalDescription = existingStory.days[existingDayDataIndex].description;
+                    // Inherit the user's manual string if they edited it
+                    finalDescription = existingStory.days[existingDayDataIndex].description || "";
+                    if (existingStory.days[existingDayDataIndex].location !== undefined && existingStory.days[existingDayDataIndex].location !== "") {
+                        finalLocation = existingStory.days[existingDayDataIndex].location;
+                    }
                 }
 
                 return {
+                    id: sectionId,
                     dayTitle: sec.dayTitle,
                     date: sec.date,
-                    location: sec.location,
+                    location: finalLocation,
                     description: finalDescription,
                     images: sec.images
                 };
@@ -262,6 +354,7 @@ async function ingestAlbums() {
             const scaffoldStory = {
                 title: title,
                 days: finalDays.map(d => ({
+                    id: d.id,
                     date: d.date,
                     location: d.location,
                     description: d.description
